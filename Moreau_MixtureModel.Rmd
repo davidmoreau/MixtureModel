@@ -1,0 +1,812 @@
+---
+title             : |
+  | \LARGE When Averaging Goes Wrong: \vspace{1ex}
+  | \Large The Case for Mixture Model Estimation in Psychological Science
+shorttitle        : "MIXTURE MODELING OF EFFECT SIZES"
+
+author: 
+  - name          : "David Moreau"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "23 Symonds St, Auckland 1010, NZ"
+    email         : "d.moreau@auckland.ac.nz"
+  - name          : "Michael C. Corballis"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "School of Psychology and Centre for Brain Research, University of Auckland, NZ"
+
+author_note: >
+  23 Symonds Street, Science Centre, Office 227, Auckland 1010, New Zealand. 
+
+
+abstract: >
+  Recent failed attempts to replicate numerous findings in psychology have raised concerns about methodological practices in the behavioral sciences. More caution appears to be required when evaluating single studies, while systematic replications and meta-analyses are being encouraged. Here, we provide an additional element to this ongoing discussion, by proposing that typical assumptions of meta-analyses be substantiated. Specifically, we argue that when effects come from more than one underlying distributions, meta-analytic averages extracted from a series of studies can be deceptive, with potentially detrimental consequences. The underlying distribution properties, we propose, should be modeled, based on the variability in a given population of effect sizes. We describe how to test for plurality of distribution modes adequately, how to use the resulting probabilistic assessments to refine evaluations of a body of evidence, and discuss why current models are insufficient in addressing these concerns. We also consider the advantages and limitations of this method, and demonstrate how systematic testing could lead to stronger inferences. Additional material with details regarding all the examples, algorithm, and code is provided online, to facilitate replication and to allow broader use across the field of psychology. 
+  
+  
+keywords          : "mixture modeling, expectation-maximization, power analysis, meta-analysis, replication, effect size, significance testing"
+wordcount         : "5,382"
+
+bibliography      : ["library.bib"]
+
+figsintext        : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+
+lang              : "english"
+class             : "doc" #man
+output            : papaja::apa6_pdf
+header-includes:
+   - \usepackage{float}
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.path = 'figures/', echo = FALSE, warning = FALSE, message = FALSE)
+setwd("/Users/davidmoreau/Google Drive/Papers/In progress/MixtureModel")
+source("startup.R")
+source("comp_estim.R")
+
+```
+
+
+# Introduction
+
+Thirty-six percent [^1]. The relatively low percentage of psychology studies successfully replicated in the recent initiative led by the Open Science Framework [@OpenScienceCollaboration2015] has sparked an intense debate within academia [e.g., @Anderson2016a; @Gilbert2016; @Lindsay2015], relayed shortly after in the media. On the one hand, some have argued that low replication is a sign that the foundations of psychological science are shaky, and that many published findings are probably false, echoing the popular claim about the medical literature [@Ioannidis2005]. In contrast, others have pointed out that the initiative itself shows the effectiveness of self-correcting mechanisms in science, and thus that its conclusions should be praised [@Bohannon2015; but see also @Ioannidis2012].
+
+Among several measures intended to improve the strength of psychology as a field [see for example @Bersoff1999; @Nosek2012; @Nosek2012a], recent discussions have emphasized the need for larger sample sizes [e.g., @Schimmack2012]. For a fixed effect size and Type I error rate, a larger sample size results in an increase in statistical power, the probability to detect an effect if it is present. In this context, meta-analyses represent an important step toward refining estimates of effect sizes and precision--more data points amount to more power, and to more confidence about specific claims. Indeed, an important rationale for meta-analyses is that of increased power, compared with single studies--effects that might be too subtle to emerge from limited and noisy data can, when pooled together, reach significance.
+
+This rationale is contingent upon meta-analyses leading to increases in precision around the true effect size, that is, increases in accuracy. The latter is an assertion that, we argue, requires substantiation, given that it makes at least two implicit assumptions. First, it postulates that effect sizes come from a single distribution; if they do not, averages can be misleading, and possibly erroneous. Second, typical meta-analytic models assume that effect sizes are distributed continuously, at least in theory [e.g., @Hedges1998]. The latter is often acknowledged in meta-analyses, as deviations from normality can be quantified, for example via model fit indices. In contrast, the former is supposedly controlled for by random-effect models, yet even these models typically assume a normal, continuous distribution for the underlying effects. As we discuss in the paper, this assumption has important limitations, with the potential to blur entire fields of research. 
+
+In this paper, we propose to directly test for the plurimodality of distributions of effect sizes, before averaging. The idea complements typical quality controls undertaken prior to including studies in a meta-analysis--based on well-defined criteria, the researcher decides to include or exclude studies in the final analysis. Similarly, we argue, we should test *mathematically* whether effect sizes can be combined together, or if they are thought to have come from different distributions. In the latter case, no elaborate model or random-effects analyses can make up for the latent heterogeneity in the data. We explain the rationale for modeling underlying distributions of effect sizes, using the example of brain training. We then propose the use of mixture models, to test for the plurality of distribution modes (i.e. mixture components), with the goal to provide a more accurate description of a series of findings. This data-driven approach allows for minimal assumptions about distribution parameters, instead using available observations to build adequate models. Finally, we discuss the advantages and limitations of the proposed method, and suggest that it could allow for more accurate descriptions and analyses of a body of evidence. To facilitate reproducibility and allow the reader to extend upon our analyses, we provide all the code and data online (https://github.com/davidmoreau/MixtureModel). 
+
+
+# Why Model Distributions of Effect Sizes?
+
+We illustrate herein the importance of modeling effect size distributions with the example of brain training. This field of study has gained traction in recent years, for good reasons, including the prospect of finding an activity that can elicit transfer to a wide range of cognitive tasks, with apparently very few side effects [for a comprehensive review of this field of research, see @Simons2016]. In short, the rationale is that a specific training regimen consisting of a single or multiple cognitive tasks can potentially lead to generalized improvement on a variety of similar (near transfer) or apparently unrelated tasks (far transfer). On the surface, this trend of research seems to contradict decades of evidence demonstrating the specificity of expertise [@Chase1973; @Ericsson1993], and appears to be at odds with the highly heritable character of numerous cognitive abilities and traits [@Benyamin2014; @Davies2011].
+
+Beyond its obvious implications, the attention that this field of research has received is also driven by inconsistencies across findings. For example, some laboratories have consistently found sizable effects of working memory training on fluid intelligence [@Jaeggi2008; @Jaeggi2011; @Jaeggi2014], whereas others have systematically failed to replicate these findings [@Harrison2013; @Thompson2013], even in close replications of the original studies [@Redick2013]. These discrepancies also extend to meta-analyses, with working memory training appearing to be effective [@Au2014; @Karbach2014] or not [@Dougherty2015; @Melby-Lervag2013], depending on the particular research group assessing the literature. Although it has been suggested that failures to take into account individual differences may be partly responsible for such inconsistencies [@Jaeggi2014; @Moreau2014a], only systematic idiosyncrasies could explain the tendency for particular laboratories to consistently find an effect or fail to do so.
+
+What mechanism could be responsible for findings that are internally reliable but externally inconsistent? Suppose that whether brain training elicits transfer or not is moderated by subtle details in the experimental setup, such as unreported design specificities, the particular population that was sampled from, or cues given by the experimenters. Brain training studies are never double blind, and even if protocols are run by research assistants supposedly naive to the specific hypothesis being tested, previous literature published by a research group is typically known by all individuals involved in a project. In this context, it may not be that an effect exists or that it does not (i.e., brain training “works” or “doesn’t work”), but rather that either conclusion can hold under specific circumstances, depending on experimental conditions.
+
+This is a subtle but important consideration, because failures to account for confounded distributions can blur conclusions as evidence accumulates, as we illustrate in the next section. In this context, correctly modeling mixture distributions is critical to refine meta-analyses, and thus appears particularly valuable in the evaluation of replications. In numerous cases, modeling underlying distributions can substantially improve assessments of cumulative evidence--models accounting for multimodal distributions may provide finer estimates than those based on unimodal distributions. We further propose that many of the apparent discrepancies in the aggregation of studies in psychology and neuroscience emerge from sampling two or more underlying distributions, rather than a single population [e.g., @Nord2017]. 
+
+
+# Mixture Models to Refine Cumulative Evidence
+
+One particularly appealing approach for dealing with this kind of problems lies in the comparison of a model that assumes a single source of effect sizes--and therefore a single, typically Gaussian, distribution--versus a model that allows for multiple sources of effect sizes, oftentimes best described with a multimodal distribution. In the latter case, one can then estimate the probability of each effect size coming from a given distribution. Once the underlying distribution of effect sizes--or of individual data points in the case of a single study--has been accurately modeled, the probability of belonging to a given distribution can be computed for each effect size. 
+
+This idea is better illustrated with a concrete example. Suppose we conduct an experiment to estimate the effect of an intervention on cognitive abilities. In a minimalist design, we randomly assign participants to either an experimental or an active control group. In addition, let us assume that the true effect we set to detect is $d = 0.5$, that is, the treatment is effective and leads to improvements of half a standard deviation on average. With a small sample size of 20 participants per condition, we would typically find that the true effect falls within our confidence interval, even though our estimate would be fairly imprecise. With a large sample size of 500 participants per condition, our estimate would be refined, as the error is reduced. In a meta-analysis of 25 studies with a small sample size of 20 participants per condition (making a total of 500 participants for each condition), our estimate would differ slightly from that of the large study and precision would be smaller, given that effects are modeled as random. Yet regardless of the specifics about the way observations are collected and aggregated--whether with a large single study or with a combination of smaller ones--larger sample sizes lead to increases in power, thus providing estimates that are both more accurate and more precise (Fig. 1A). 
+
+In this example, the meta-analysis model is a random-effects model, because the simulated studies represent a random selection from a larger population of studies [for an excellent discussion of the difference between fixed- and random-effects models, see @Hedges1998]. The random-effects model is based on restricted maximum-likelihood estimation [^2], a method that provides an estimate for the amount of heterogeneity and takes that variability into account in the overall model [see for example @Kalaian1996]. Although there is some variability in the precise method used in meta-analyses [@Hedges1998; @Kelley2012; @Schmidt1992], this process matches how evidence is typically accumulated in the behavioral sciences, with each additional study thought to contribute to the refinement of our understanding about a particular research question.
+
+In a number of cases, however, this may not be a realistic scenario. As recent discussions have suggested, many of the effects psychologists study in the lab are volatile--they can appear under the right circumstances and vanish under alternative conditions [@OpenScienceCollaboration2015; for an illustration in the field of brain training, see @Shipstead2012]. To increase accuracy with the accumulation of evidence, this factor should be taken into account [@Johnson2013; @Kamary2014; @Marin2005]. Continuing with our earlier example, imagine now that instead of studying a constant effect size of half a standard deviation, we set out to detect an effect size of $d = 1$ present in some instances (say, $P = .4$) but not in others ($P = .6$). What would the literature look like in this case? Some well-powered studies would detect an effect worth reporting by frequentist standards of statistical significance (i.e., $p < .05$). Others studies would not allow rejecting the null-hypothesis, despite adequate power. The literature would be inconsistent, and yield disparate results.
+
+This is exactly what we observe if we simulate such a model (Fig. 1B). When more than one distribution is allowed to contribute to a sample of effect sizes, precision and accuracy no longer covary. If distributions are segregated (i.e., if they are not mixed with one another in single studies), a small study may yield a substantially different effect size from a large study, obscuring inferences drawn from the data and undermining out-of-sample predictions. More prejudicial still, a meta-analysis of 25 small studies provides a false impression of resolution, with an overall effect size estimated to lie somewhere between the two true population effect sizes. The inherent problem is that the degree of certainty associated with a point estimate typically increases with greater power. In cases where only one distribution is allowed to contribute to a sample of effect size, this may be reasonable (Fig. 1A). However, this assumption is no longer valid if multiple distributions contribute to a sample of effect sizes (Figure 1B). In the latter case, greater power leads to precision increase around an erroneous effect size, with potential detrimental consequences on applied policies and decisions.
+
+```{r figure1, include=FALSE}
+
+### When prevalence is constant across studies ###
+set.seed(121)
+pop.a <- rnorm(10^6, mean = 0, sd = 1)
+pop.b <- rnorm(10^6, mean = 0, sd = 1) + sd(pop.a)/2
+
+### Small experiment (n=20)
+sampl20.a <- sample(pop.a, 20, replace = T)
+sampl20.b <- sample(pop.b, 20, replace = T)
+t20.ab <- t.test(sampl20.a, sampl20.b)
+es20.ab <- tes(t20.ab$statistic, 20, 20)
+
+### Large experiment (n=500)
+sampl500.a <- sample(pop.a, 500, replace = T)
+sampl500.b <- sample(pop.b, 500, replace = T)
+t500.ab <- t.test(sampl500.a, sampl500.b)
+es500.ab <- tes(t500.ab$statistic, 500, 500)
+
+### Meta-analysis (n=20 * 25)
+data.ab <- data.frame() #create data frame to store results
+for (i in 1:25) {
+  sampl20.a <- sample(pop.a, 20, replace = T)
+  sampl20.b <- sample(pop.b, 20, replace = T)
+  data.ab <- rbind(data.ab, data.frame(
+    study=i,
+    m1i=mean(sampl20.a),
+    m2i=mean(sampl20.b),
+    sd1i=sd(sampl20.a),
+    sd2i=sd(sampl20.b),
+    n1i=20, n2i=20
+  ))
+}
+
+es.meta.ab <- escalc(measure="SMD", data=data.ab, m1i=m1i, m2i=m2i, sd1i=sd1i, sd2i=sd2i, n1i=n1i, n2i=n2i)
+meta.ab <- rma(yi, vi, data=es.meta.ab, method="REML")
+
+#study <- 1:25
+#es <- data.frame(study, es.meta[3])
+
+table1 <- data.frame(
+  n = factor(c("Small", "Large", "Meta"), ordered=T),
+  es = abs(c(es20.ab$d, es500.ab$d, meta.ab$b)), 
+  lowerci = abs(c(es20.ab$l.d, es500.ab$l.d, meta.ab$ci.lb)),
+  upperci = abs(c(es20.ab$u.d, es500.ab$u.d, meta.ab$ci.ub)))
+
+constant.plot <- ggplot(table1, aes(n, es, ymin=lowerci, ymax=upperci)) +
+  geom_pointrange(data = table1, aes(n, es, color=n), size=1) +
+  geom_hline(yintercept=.5, linetype="dashed", color=palette[5], size=.9) +
+  xlab("Study") + ylab("Effect Size") +
+  scale_x_discrete(limits = c("Meta", "Large", "Small")) +
+  ylim(-.5, 1.6) +
+  coord_flip() + #flip axes
+  ggtitle("A") +
+  scale_color_manual(values = c(palette[2],palette[4], palette[1]),
+                     name = "Type of study",
+                     breaks = c("Small", "Large", "Meta"),
+                     labels = c("Small experiment", "Large experiment", "Meta-analysis")) +
+  theme_bw() + 
+  theme(legend.justification = c(1,0.1), legend.position = "none") + #removed legend.position=c(1,0.1)
+  theme(axis.line.x = element_line(colour = "black", size=.5, linetype = 1),
+        axis.line.y = element_line(colour = "black", size=.5, linetype = 1),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+
+
+### When prevalence is NOT constant across studies ###
+set.seed(126)
+pop.c <- rnorm(10^6, mean = 0, sd = 1)
+pop.d <- rnorm(10^6, mean = 1, sd = 1)
+prev <- .40 #.40 effect is present vs. .60 effect is not present
+pool <- c(sample(pop.c, 10^6 * (1-prev), replace = T), sample(pop.d, 10^6 * (prev), replace = T))
+
+### Small experiment (n=20)
+sampl20.c <- sample(pop.c, 20, replace = T)
+sampl20.d <- sample(pop.d, 20, replace = T)
+t20.cd <- t.test(sampl20.c, sampl20.d)
+es20.cd <- tes(t20.cd$statistic, 20, 20)
+
+### Large experiment (n=500)
+sampl500.c <- sample(pop.c, 500,replace = T)
+sampl500.d <- sample(pop.c, 500, replace = T)
+t500.cd <- t.test(sampl500.c, sampl500.d)
+es500.cd <- tes(t500.cd$statistic, 500, 500)
+
+### Meta-analysis (n=20 * 25)
+data.d <- data.frame() #create data frame to store results
+for (i in 1:10) {
+  sampl20.d1 <- sample(pop.a, 20, replace = T)
+  sampl20.d2 <- sample(pop.b, 20, replace = T)
+  data.d <- rbind(data.d, data.frame(
+    study=i,
+    m1i=mean(sampl20.d1),
+    m2i=mean(sampl20.d2),
+    sd1i=sd(sampl20.d1),
+    sd2i=sd(sampl20.d2),
+    n1i=20, n2i=20
+  ))
+}
+
+data.c <- data.frame() #create data frame to store results
+for (i in 1:15) {
+  sampl20.c1 <- sample(pop.a, 20, replace = T)
+  sampl20.c2 <- sample(pop.b, 20, replace = T)
+  data.c <- rbind(data.c, data.frame(
+    study=i,
+    m1i=mean(sampl20.c1),
+    m2i=mean(sampl20.c2),
+    sd1i=sd(sampl20.c1),
+    sd2i=sd(sampl20.c2),
+    n1i=20, n2i=20
+  ))
+}
+
+# Combine both data frames
+effect <- c(rep("yes", 10), rep("no", 15))
+data.cd <- rbind(data.c, data.d)
+data.cd <- cbind(data.cd, effect)
+
+es.meta.cd <- escalc(measure="SMD", data=data.ab, m1i=m1i, m2i=m2i, sd1i=sd1i, sd2i=sd2i, n1i=n1i, n2i=n2i)
+meta.cd <- rma(yi, vi, data=es.meta.cd, method="REML", verbose=T) #random-effects model, based on REML
+
+
+table2 <- data.frame(
+  n = factor(c("Small", "Large", "Meta"), ordered=T),
+  es = c(abs(es20.cd$d), abs(es500.cd$d), abs(meta.cd$b)), 
+  lowerci = c(abs(es20.cd$l.d), es500.cd$l.d, abs(meta.cd$ci.lb)),
+  upperci = c(abs(es20.cd$u.d), abs(es500.cd$u.d), abs(meta.cd$ci.ub)))
+
+variable.plot <- ggplot(table2, aes(n, es, ymin=lowerci, ymax=upperci)) +
+  geom_pointrange(data = table2, aes(n, es, color=n), size=1) +
+  geom_hline(yintercept=0, linetype="dashed", color=palette[5], size=.9) +
+  geom_hline(yintercept=1, linetype="dashed", color=palette[5], size=.9) +
+  xlab("Study") + ylab("Effect Size") +
+  scale_x_discrete(limits = c("Meta", "Large", "Small")) +
+  ylim(-.5, 1.6) +
+  #scale_y_discrete(breaks=seq(0, 1, .1), labels=seq(0, 1, .1)) +
+  coord_flip() + #flip axes
+  ggtitle("B") +
+  scale_color_manual(values = c(palette[2],palette[4], palette[1]),
+                     name = "Type of study",
+                     breaks = c("Small", "Large", "Meta"),
+                     labels = c("Small experiment", "Large experiment", "Meta-analysis")) +
+  theme_bw() + 
+  theme(legend.justification = c(1,0.1), legend.position = "none") + #removed legend.position=c(1,0.1)
+  theme(axis.line.x = element_line(colour = "black", size=.5, linetype = 1),
+        axis.line.y = element_line(colour = "black", size=.5, linetype = 1),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+
+
+# Create figure 1
+grid.arrange(constant.plot, variable.plot, nrow = 2)
+```
+
+![Underlying distributions of effect sizes affect accuracy and precision differently. Here, we present mean effect sizes from simulated independent t-tests performed on two samples randomly drawn from two simulated populations, which differ by half a standard deviation (d = 0.5). "Small", "Large", and "Meta" studies depict simulations with $N = 20$, $N = 500$, and $N = 20$ resampled 25 times), respectively, per cell. The vertical dotted line shows the true effect sizes. (A) In the typically assumed scenario of a single underlying distribution of effect sizes, increases in power lead to more precise estimates. Here, additional power allows point estimates closer to the true effect, $d = 0.5$, with all types of study showing a fair estimate of the true effect size. Precision and accuracy increase together. (B) When more than one underlying distribution is present, however, precision and accuracy may not vary together. In this scenario, an effect was either present ($d = 1, P = .4$) or not ($d = 0, P = .6$). In such case, studies with high statistical power provide more precise estimates of a specific, non-representative effect size (large experiment) or a precise estimate of the wrong effect size (meta-analysis), leading to a decrease in overall accuracy.\label{Figure 1}](figures/figure1-1.pdf)
+
+So, effect sizes vary, and cannot always be trusted to represent estimates of a single underlying effect. Is this not what random-effects models in meta-analyses are designed to account for? Not exactly. Using random-effects to model effect sizes coming from multiple sources is akin to scrambling eggs, only to later attempt to separate egg yolks from the whites [for a discussion of the assumptions and limitations of random-effects meta-analysis, see @Higgins2009]. In contrast, by using mixture modeling, the identification and estimation of subpopulations within a distribution, we propose to deal with this issue before it becomes problematic, that is, before averaging (see Box 1 for details). Random-effects models, in this context, have other important limitations; they do not take into account the inherent uncertainty in the between-study variance estimate (the profile likelihood approach, which uses nested iterations for converging, is an exception). Figure 1B provides a visual example of these limitations--even though the meta-analysis depicted uses a random-effects model, the average estimate is wrong. The problem does not lie in the averaging method per se, but rather in its application.
+
+Before moving on to potential remedies, let us ponder the plausibility of this scenario. One might assume that such dichotomy is uncommon, perhaps specific to the particular example we chose. Given the striking between-labs variability but within-labs consistency in experimental results, we suspect it is not [@Au2014; @Dougherty2015; @Karbach2014; @Melby-Lervag2013; @Simons2016]. At the genetic level, the difference between the presence or absence of an effect could be variations in polymorphisms, such as *COMT* or *BDNF*, known to influence cortical plasticity [@Witte2012], response to training interventions [@Moreau2017], and typically distributed unequally across subpopulations [@Gonzalez-Castro2013; @Moreau2017; @Petryshen2010]. At the neural level, discrepancies could be based on individual thresholds of long-term potentiation (LTP) or depression/depotentiation (LTD), also critical factors of plasticity [@Ridding2010], and greatly affected by aging [@Barnes2003]. At the behavioral level, moderating factors could include expectation effects [@Boot2013] or experimenter bias, systematic recruiting methods, targeted populations, or undocumented differences in protocol [@Schultz1969]. Given the sensitivity to protocol specificities inherent to experimental designs in general, and of repeated-measures experiments in particular, this list is only an excerpt of the potential influencing variables. In addition, and because the focus of psychology experiments is often on participants' behavior, researchers might be oblivious to extraneous variables, with unintended but conspicuous consequences [e.g., @Simmons2011]. In theory, these disparities should be equated via random assignment, yet such assumption is highly dependent upon appropriate sample sizes, with typical designs being rarely satisfactory in this regard [e.g., @Moreau2014a]. Besides, random assignment only controls for interindividual variability if the latter is truly random, yet in many instances it is not the case. If the source of error, or bias, is systematic, this assumption no longer holds.
+
+Furthermore, outcomes do not have to be binary to give rise to problematic and potentially misleading aggregates. Whenever effect sizes come from a discrete distribution, averaging methods can yield imprecise estimates. From the Central Limit Theorem, we know that the sampling distribution of the mean representing repeated draws from a multinomial distribution eventually approximates a normal distribution, but it does not follow that the arithmetic mean necessarily reflects a genuine possibility on a single study or for a single individual. If I throw a fair six-sided die a number of times and compute the tally at the end of the sequence, the mean will soon approximate 3.5, even though 3.5 is not a possible outcome on a given trial. In order to model the behavior of a single die, I need to be mindful when averaging outcomes. Thus, only if we consider that effect sizes truly vary along a continuum can we disregard the above reflections. 
+
+This idea has important implications, which perhaps depend on the primary goal of meta-analysis research. If the aim is to provide estimates of mean effect sizes, so as to best reflect the average outcome of a set of studies, then estimates that are not representative of a possible outcome are not necessarily problematic. However, with the growing emphasis on prediction in psychology [see for example @Yarkoni2017], we might want to know the typical outcome of an experimental manipulation, a treatment, or of an intervention. If the goal is to predict future outcomes, the ability to discard impossible outcomes is critical. In that sense, modeling effect size distributions can have important benefits. To be clear, we are not arguing that every distribution of effect sizes is plurimodal. We are not even arguing that it makes for the majority of cases--recent evidence from the Many Labs Project [e.g., @Klein2014] or the Reproducibility Project: Psychology [@OpenScienceCollaboration2015] may suggest that seemingly important variables do not always moderate effects (although we should point out that these large-scale projects may not be representative of the typical effects in psychology). But because mixture estimation is easy to implement and provides conservative safeguards against overfitting, we believe that the plausibility of mixtures can and should be estimated, as these estimates genuinely inform conclusions based on cumulative evidence. In the next section, we explain how we propose to deal with such problems, to allow modeling multiple distributions, and finer estimates of a body of evidence.
+
+
+# Applications to Meta-Analyses
+
+Continuing with our earlier brain training example, suppose that instead of assuming a single normal distribution, we directly test the plausibility of this assumption. Based on the Expectation-Maximization (EM) algorithm (see Box 2 for details), we can evaluate the number of underlying distributions confounded in the available sample of effect sizes (i.e., how many modes the distribution contains). Once we have determined the most plausible number of distributions, we can estimate posterior likelihoods for each effect size. These likelihoods allow quantifying the probability of coming from a given distribution for each data point. We can then infer the overall proportions of the entire set of data points that come from a given distribution. These estimates are called mixing weights, or mixing coefficients.
+
+In the simple but representative meta-analysis initially described in Figure 1, this method allows for a more precise account of effect sizes, with a distinction between studies that tend to suggest the absence of an effect, and those which suggest a moderate effect. Specifically, the mixing weights allow differentiating between two underlying distributions, one with $\lambda = .64$ and the other with $\lambda = .36$ (Fig. 2A). Roughly speaking, this indicates that the overall population contains two distributions, one including 64% of the data points, while the other contains 36% of them. Each cluster of studies can then be aggregated separately, in order to provide precise estimates of effect size when an effect is present vs. when it is not, or when an effect is ecologically meaningful vs. when it is of limited influence. In our earlier example, this approach allows modeling two normal distributions, centered at $d = 0.06$ and $d = 1.22$, respectively (Fig. 2B), making for a more accurate model of the underlying data (Fig. 2C).
+
+Interestingly, one can then look for reported or unreported differences in samples, designs, or analyses, so as to gain a better understanding of the specific circumstances that cause or prevent the effect under study. This is a clear improvement over averaging methods that do not take distribution properties into account, as the approach provides a more accurate depiction of reality--in this case, two separate effect sizes, with very different implications. It also highlights the potentially pernicious effect of typical meta-analytic techniques when conducted on inconsistent data. Importantly, the same approach can be applied to a single replication; rather than modeling mixture distributions from the effect sizes generated by all studies, the algorithm can be run on vectors of individual data points, to infer how likely they are to come from different distributions.
+
+\begin{figure}[H]
+  \centering
+  \fitfigure{figures/figure2-3.pdf}
+  \caption{Mixing weights estimation and probability densities for simulated mixture. (A) Posterior likelihoods, given by the Expectation-Maximization algorithm (see online material), show a random walk that eventually converges to the true mixing weights ($\lambda = .64$ and $\lambda = .36$, respectively, horizontal dashed lines). The mixing weights help determine the shape of the underlying distribution of effect sizes, based on incomplete information (i.e. a given sample of effect sizes). In this example, effect sizes (Cohen’s d) are simulated from a mixture distribution of two single Gaussian distributions $N(\mu, \sigma^2)$ with $\mu = 0$ or $\mu = 1$, with probability $P = .6$ and $P = .4$, respectively), and $\sigma^2 = 0.25$. (B) The Expectation-Maximization algorithm evaluates model fit (log-likelihoods) for various numbers of Gaussian components by splitting the data into a training set and a test set (i.e. cross-validation, see online code), to determine the probability densities of effect sizes assuming a single distribution (black dotted line) vs. two distinct distributions (blue and orange lines). Even with a limited number of observations, true values are retrieved fairly accurately, as shown by the peaks of the blue and turquoise density distributions. (C) These estimates of effect size can then be compared to the ones extracted from a random-effects meta-analysis. Recall that in this example (shown in Figure 1B) a random-effects model gives a precise estimate of the wrong effect size; in contrast, estimating the mixture components first leads to two distinct estimates of effect sizes, including their respective true effect size.}
+\end{figure}
+
+```{r figure2, include=FALSE}
+
+set.seed(114)
+
+# Set parameter values
+n <- 100
+lam <- 10 #lambda <- rep(14, 2)/2
+mu <- c(0, 1)
+sigma <- rep(.5, 2)
+
+# Generate data from single Gaussian
+unimod <- rnorm(n, 
+                mean = (mu[1] + mu[2])/2, 
+                sd = (sigma[1] + sigma[2]/2))
+
+# Generate data from two Gaussian
+bimod <- c(mod1 <- rnorm(n / 2 + 10, mean = mu[1], sd = sigma[1]), mod2 <- rnorm(n / 2 - 10, mean = mu[2], sd = sigma[2]))
+
+# Could also be generated via mixed Gaussian
+multimod <- rnormmix(n, 
+                     lam, #Vector of mixture probabilities, with length equal to m, the desired number of components (subpopulations). 
+                     #This is assumed to sum to 1; if not, it is normalized
+                     mu, 
+                     sigma)
+
+# Save in a data frame
+data <- data.frame(unimod, bimod)
+
+# Mixture model
+mixmdl <- normalmixEM(bimod, k = 2); summary(mixmdl); plot(mixmdl)
+#mixmdl <- data.frame(mixmdl$x) #change this line to mixmdl <- data.frame(mixmdl$x) for graph
+
+# Data frame for bimod
+post <- data.frame(iteration = 1:length(mixmdl$posterior[,1]), 
+                   value1 = mixmdl$posterior[,1], 
+                   value2 = mixmdl$posterior[,2])
+post <- post %>%
+  mutate(cumsum1 = cumsum(value1), cumsum2 = cumsum(value2)) %>%
+  mutate(converg1 = cumsum1 / iteration, converg2 = cumsum2 / iteration)
+esplot <- c(-2,0,2,4,6)
+
+# Create function to plot mixture components
+plotcomp <- function(x, mu, sigma, lamda) {
+  lamda * dnorm(x, mu, sigma)
+}
+
+# Plot bimodal density distributions (k = 2)
+distrib.plot <- data.frame(x = mixmdl$x) %>%
+  ggplot() +
+  geom_histogram(aes(x, ..density..), binwidth = .2, colour = "gray", 
+                 fill = "gray") +
+  #geom_density(aes(x, ..density..), color = palette[1], size=1) +
+  stat_function(geom = "line", fun = dnorm, args = list(mean = 1), 
+                colour = "black", lwd = .6, linetype = "dashed") +
+  stat_function(geom = "line", fun = plotcomp,
+                args = list(mixmdl$mu[1], mixmdl$sigma[1], lam = mixmdl$lambda[1]),
+                colour = palette[1], lwd = 1.5) +
+  stat_function(geom = "line", fun = plotcomp,
+                args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
+                colour = palette[2], lwd = 1.5) +
+  xlab("Effect Size") +
+  ylab("Density") +
+  ggtitle("B") +
+  xlim(-2.1, 3) +
+  #scale_x_continuous(breaks = esplot, labels = c(-1, 0, 1, 2, 3)) +
+  default
+
+# Posterior probabilities plot
+posterior.plot <- ggplot(data = post, aes(x = iteration, y = converg1)) +
+  geom_line(color = palette[1], size = 1.5) +
+  geom_line(data = post, aes(x = iteration, y = converg2), color = palette[2], size = 1.5) +
+  geom_hline(yintercept = .5, color = "gray50", linetype = "solid", size = 1) +
+  geom_hline(yintercept = mixmdl$lambda[1], color = "gray50", linetype = "dashed", size = 1) +
+  geom_hline(yintercept = mixmdl$lambda[2], color = "gray50", linetype = "dashed", size = 1) +
+  xlab("Iteration") + ylab(expression(lambda)) + 
+  ggtitle("A") +
+  default
+
+# Check the means
+mean(mixmdl$lambda[1])
+mean(mixmdl$lambda[2])
+mixmdl$mu
+
+# Prepare data for next plot
+table3 <- data.frame(
+  n = factor(c("Random-effects model", "Mixture model - Component 1", "Mixture model - Component 2"), ordered=T),
+  es = c(abs(meta.cd$b), mixmdl$mu[1], mixmdl$mu[2]),
+  lowerci = c(abs(meta.cd$ci.ub), mixmdl$mu[1] - mixmdl$sigma[1], mixmdl$mu[2] - mixmdl$sigma[2]), 
+  upperci = abs(c(meta.cd$ci.lb, mixmdl$mu[1] + mixmdl$sigma[1], mixmdl$mu[2] + mixmdl$sigma[2]))) 
+  
+# Create plot to compare mixture and random-effects
+mixcorrected.plot <- ggplot(table3, aes(n, es, ymin=lowerci, ymax=upperci)) +
+  geom_pointrange(data = table3, aes(n, es, color=n), size=1) +
+  geom_hline(yintercept=0, linetype="dashed", color=palette[5], size=.9) +
+  geom_hline(yintercept=1, linetype="dashed", color=palette[5], size=.9) +
+  xlab("Meta-Analytic Method") + ylab("Effect Size") +
+  #scale_x_discrete(limits = c("Mixture model - Component 2", "Mixture model - Component 1", "Random-effects model")) +
+  ylim(-2.1, 3) +
+  #scale_y_discrete(breaks=seq(-0.5, 1.5, .5), labels=seq(-0.5, 1.5, .5)) +
+  coord_flip() + #flip axes
+  ggtitle("C") +
+  scale_color_manual(values = c(palette[1],palette[2], palette[4]),
+                     name = "Model",
+                     breaks = c("Random-effects model", "Mixture model - Component 1", "Mixture model - Component 2"),
+                     labels = c("Random-effects", "Mixture - Estimate 1", "Mixture - Estimate 2")) +
+  theme_bw() + 
+  guides(colour = guide_legend(override.aes = list(size = 0.6))) +
+  theme(legend.justification = c(1,0.1), legend.position=c(0.375, .55), 
+        legend.text=element_text(size=8), legend.title = element_text(size = 9), legend.key.size = unit(0.8, "line")) +
+  theme(axis.line.x = element_line(colour = "black", size=.5, linetype = 1),
+        axis.line.y = element_line(colour = "black", size=.5, linetype = 1),
+        axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+  
+# Create figure 2
+right <- grid.arrange(distrib.plot, mixcorrected.plot, nrow = 2)
+grid.arrange(posterior.plot, right, widths=c(0.3, 0.7), ncol = 2)
+#top <- grid.arrange(posterior.plot, distrib.plot, widths=c(0.3, 0.7), ncol = 2)
+#blank <- rectGrob(gp=gpar(col="white"))
+#bottom <- grid.arrange(mixcorrected.plot, ncol = 1)
+#grid.arrange(top, bottom, nrow = 2)
+
+# Code for markdown figure
+#![Mixing weights estimation and probability densities for simulated mixture. (A) Posterior likelihoods, given by the Expectation-Maximization algorithm (see online material), are used to generate a random walk that eventually converges to the true mixing weights ($\lambda = .64$ and $\lambda = .36$, respectively, horizontal dashed lines). These weights help determine the shape of the underlying distribution of effect sizes, based on incomplete information (i.e. a given sample of effect sizes). In this example, effect sizes (Cohen’s d) are simulated from a mixture distribution of two single Gaussian distributions $N(\mu, \sigma^2)$ with $\mu = 0$ or $\mu = 1$, with probability $P = .6$ and $P = .4$, respectively), and $\sigma^2 = 0.25$. (B) The Expectation-Maximization algorithm evaluates model fit (log-likelihoods) for various numbers of Gaussian components by splitting the data into a training set and a test set (i.e. cross-validation, see online code), to determine the probability densities of effect sizes assuming a single distribution (black dotted line) vs. two distinct distributions (blue and orange lines). Even with a limited number of observations, true values are retrieved fairly accurately, as shown by the peaks of the blue and turquoise density distributions. (C) These estimates of effect size can then be compared to the ones extracted from a random-effects meta-analysis. Recall that in this example (shown in Figure 1B) a random-effects model gives a precise estimate of the wrong effect size; in contrast, estimating the mixture components first leads to two distinct estimates of effect sizes, both including their true underlying effect size, respectively. \label{Figure 2}](figures/figure2-3.pdf)
+
+```
+
+
+Let us gauge the reliability of this method on a real dataset. Consistent with our earlier example, we used a recent meta-analysis in the field of brain training [@Melby-Lervag2016]. Specifically, the study investigated the evidence for far-transfer following working memory training, that is, transfer to abilities that were not directly targeted in the training regimen. We applied the procedure presented on simulated data (and further detailed in the online material and R code) to the vector of effect sizes (Hedge’s g) across studies. Results showed evidence for a mixture distribution with multiple components (Fig. 3A). Further analyses indicated that a two-component solution was sufficient, after penalizing for model complexity (i.e. total number of components). The corresponding log-likelihoods, estimated for each data points, are shown in Figure 3B. The mixing weights extracted for each component were $\lambda = .83$ and $\lambda = .17$, respectively. 
+
+\begin{figure}[H]
+  \centering
+  \fitfigure{figures/figure3-14.pdf}
+  \caption{Mixture estimation for the brain training meta-analysis by Melby-Lervag *et al.* (2016). (A) Testing data from the Expectation-Maximization algorithm indicated that two components should be retained. The blue line shows locally weighted smoothing. (B) Estimated log-likelihoods for the two components selected, over the entire set of observations. For readability, only a random, non-consecutive subset ($N = 100$) of the whole vector of effect sizes ($N = 854$) is shown. (C) Estimated mixing weights ($\lambda$) based on posterior likelihoods from the vector of effect sizes. Here, the mixing weights ($\lambda = .83$ and $\lambda = .17$, blue and turquoise lines, respectively) suggest that the data mostly comes from the first distribution, whereas the second is less well represented. (D) Probability densities of effect sizes. Densities are retrieved from the mixing weights estimated in A (blue and turquoise density lines). The mixture represented by the blue and turquoise lines is a better fit to the data than the single Gaussian (dotted black line). The corresponding estimated means are shown with the blue and turquoise dashed lines.}
+\end{figure}
+
+Posterior estimates suggested that two underlying distribution contributed to the overall distribution of effect sizes (Fig. 3C). That is, brain training appears to have very limited influence on cognitive performance most of the time, but to be quite effective in other, more restricted instances. With the approach we presented in this paper, we can extract estimates for the density of both distributions, allowing a more fine-grained analysis of the literature. We can then identify precisely the effect sizes that emerged from each distribution, thus providing fine-grained estimates of the discrepancies (Fig. 3D). This result is interesting in and of itself, because it suggests that there are important differences that need to be further explored, whether related to protocols, demographics, or individual responses to training. One can then look for moderators or extraneous variables that were either initially coded but not analyzed, or, more plausibly, that were not thought to be of interest. This allows moving the discussion forward--rather than concluding that brain training has a limited effect, we can see that it appears to be ineffective most of the time, but quite potent in rare instances. Regardless of the specific example, mixture model estimation provides a structured framework to probe subtle differences within a given population. In psychology, many researchers are interested in these questions, but oftentimes analyses are performed after sources of discrepancies have been mixed and processed. Mixture model estimation enables moving away from dichotomous thinking based on averages, in favor of a more constructive focus on the source of discrepancies.
+
+
+```{r figure3, include=FALSE}
+# Load meta-analysis data
+pps <- read.csv("PPS_MelbyLervag.csv", header=T)
+es.d <- pps$Std.diff.in.means
+es <- pps$Hedges.s.g
+
+# Histogram of Effect Sizes
+plot(hist(es,breaks=101), col="gray", border="gray", freq=FALSE,
+     xlab="Effect size (Cohen's d)", main="Effect Sizes")
+lines(density(es), lty=2)
+
+# Two-component Gaussian mixture (calls mixtools package)
+
+es.2k <- normalmixEM(es, k=2, maxit=100, epsilon=0.01)
+
+# Function to plot Gaussian mixture components
+plot.normal.components <- function(mixture, component.number,...) {
+  curve(mixture$lambda[component.number] *
+          dnorm(x,mean=mixture$mu[component.number],
+                sd=mixture$sigma[component.number]), add=TRUE, ...)
+}
+
+### Plot
+plot(hist(es,breaks=101),col="gray",border="gray",freq=FALSE,
+     xlab="Effect size (Hedge's g)", main="")
+lines(density(es),lty=2, col="#FF8F00", lwd=2)
+sapply(1:2,plot.normal.components,mixture=es.2k, col="#4F94CD", lwd=2)
+
+# Function to calculate the cumulative distribution function of a Gaussian mixture model
+pnormmix <- function(x, mixture) {
+  lambda <- mixture$lambda
+  k <- length(lambda)
+  pnorm.from.mix <- function(x,component) {
+    lambda[component]*pnorm(x,mean=mixture$mu[component],
+                            sd=mixture$sigma[component])
+  }
+  pnorms <- sapply(1:k, pnorm.from.mix, x=x)
+  return(rowSums(pnorms))
+}
+
+
+# Distinct values in the data
+distinct.es <- sort(unique(es))
+# Theoretical CDF evaluated at each distinct value
+tcdfs <- pnormmix(distinct.es, mixture=es.2k)
+# Empirical CDF evaluated at each distinct value
+# ecdf(es) returns an object which is a _function_, suitable for application
+# to new vectors
+ecdfs <- ecdf(es)(distinct.es)
+# Plot them against each other
+plot(tcdfs, ecdfs, 
+     xlab = "Theoretical CDF", 
+     ylab = "Empirical CDF", 
+     xlim = c(0,1),
+     ylim = c(0,1))
+# Main diagonal for visual reference
+abline(0,1)
+
+
+# Probability density function for a Gaussian mixture
+dnormalmix <- function(x, mixture, log = FALSE) {
+  lambda <- mixture$lambda
+  k <- length(lambda)
+  # Calculate share of likelihood for all data for one component
+  like.component <- function(x,component) {
+    lambda[component]*dnorm(x,mean = mixture$mu[component],
+                            sd = mixture$sigma[component])
+  }
+  # Create array with likelihood from all components over all data
+  likes <- sapply(1:k, like.component, x = x)
+  # Add up contributions from components
+  d <- rowSums(likes)
+  if (log) {
+    d <- log(d)
+  }
+  return(d)
+}
+
+# Log likelihood function for a Gaussian mixture
+loglike.normalmix <- function(x, mixture) {
+  loglike <- dnormalmix(x, mixture, log=TRUE)
+  return(sum(loglike))
+}
+
+# Evaluate various numbers of Gaussian components by data-set splitting
+n <- length(es)
+data.points <- 1:n
+data.points <- sample(data.points) # Permute randomly
+train <- data.points[1:floor(n/2)] # First random half is training
+test <- data.points[-(1:floor(n/2))] # 2nd random half is testing
+candidate.component.numbers <- 2:5
+loglikes <- vector(length = 1 + length(candidate.component.numbers))
+# k=1 needs special handling
+mu <- mean(es[train]) # MLE of mean
+sigma <- sd(es[train])*sqrt((n - 1)/n) # MLE of standard deviation
+loglikes[1] <- sum(dnorm(es[test], mu, sigma, log=TRUE))
+for (k in candidate.component.numbers) {
+  mixture <- normalmixEM(es[train],k=k, maxit=400,epsilon=1e-2)
+  loglikes[k] <- loglike.normalmix(es[test], mixture=mixture)
+}
+
+### Figure 4
+plot(x = 1:5, y = loglikes, xlab = "Number of mixture components",
+     ylab = "Log-likelihood on testing data")
+lines(loglikes)
+
+# Component figure
+loglikesdata <- data.frame(x=1:5, loglikes)
+components <- ggplot(loglikesdata, aes(x, loglikes)) + 
+  geom_line(color="gray45", size=.75) +
+  geom_point() +
+  geom_smooth(color=palette[4]) +
+  xlab("Mixture components") +
+  ylab("Log-likelihood") +
+  ggtitle("A") +
+  default
+
+# Plot
+es.k2 <- normalmixEM(es, k=2, maxit=400, epsilon=1e-2)
+plot(hist(es, breaks=101), col="grey", border="grey", freq=FALSE,
+     xlab="Effect size (g)", main="Effect Sizes", xlim=c(-2.5, 2.5), ylim=c(0, 1.1))
+lines(density(es),lty=2, col="#FF8F00")
+sapply(1:2, plot.normal.components, mixture=es.k2)
+
+# 3 components
+es.k3 <- normalmixEM(es, k=3, maxit=400, epsilon=1e-2)
+plot(hist(es, breaks=101), col="grey", border="grey", freq=FALSE,
+     xlab="Effect size (g)", main="3 components solution", xlim=c(-2.5, 2.5), ylim=c(0, 1.1))
+lines(density(es),lty=2, col="#FF8F00")
+sapply(1:2, plot.normal.components, mixture=es.k3)
+
+distinct.es <- sort(unique(es))
+tcdfs <- pnormmix(distinct.es, mixture=es.2k)
+ecdfs <- ecdf(es)(distinct.es)
+plot(tcdfs,ecdfs,xlab="Theoretical CDF", ylab="Empirical CDF", xlim=c(0,1),
+     ylim=c(0,1))
+abline(0,1)
+
+# Function to estimate number of components
+source("comp_estim.R")
+es.comp <- comp.estim(es, max.comp=5, B=length(es), mix.type="normalmix",
+                     maxit=400, epsilon=1e-2)
+
+return.comp <- data.frame(Observation=1:length(es), 
+                          y1=es.comp$log.lik[[1]], 
+                          y2=es.comp$log.lik[[2]], 
+                          y3=es.comp$log.lik[[3]])
+
+sample <- return.comp[sample(nrow(return.comp), 100, replace = F), ] #whole data set (n = 854) is difficult to visualize
+#instead, plotting random subset of boot.return
+subset <- ggplot(sample, aes(Observation, y1)) +
+  geom_line(color=palette[2], size=1) +
+  geom_line(data=sample, aes(Observation, y2), color=palette[1], size=1) +
+  #geom_line(data=return.comp, aes(Iteration, y3), color="blue") 
+  ylab("Posterior Estimates") +
+  ggtitle("B") +
+  default
+
+# Figure 3: Decision process and final log-likelihoods 
+top <- grid.arrange(components, subset, widths=c(0.3, 0.7), ncol = 2)
+
+# MERGE FIG 3 and 4
+
+# Load meta-analysis data
+pps <- read.csv("PPS_MelbyLervag.csv", header=T)
+es.d <- pps$Std.diff.in.means
+es <- pps$Hedges.s.g
+
+# Mixture model (normal and non-parametric)
+par <- normalmixEM(es, k = 2, epsilon = 0.01) ; summary(par) ; plot(par)
+sempar <- spEMsymloc(es, mu0 = c(-1, 4)); sempar$lambdahat #semi-parametric estimation
+
+# Data frame for es
+post.es <- data.frame(iteration = 1:length(par$posterior[,1]), 
+                   value1 = par$posterior[,1], 
+                   value2 = par$posterior[,2])
+post.es <- post.es %>%
+  mutate(cumsum1 = cumsum(value1), cumsum2 = cumsum(value2)) %>%
+  mutate(converg1 = cumsum1 / iteration, converg2 = cumsum2 / iteration)
+
+# Plot meta-analysis distributions
+distrib.plot.es <- data.frame(x = es) %>%
+  ggplot(aes(x)) +
+  geom_histogram(aes(x, ..density..), binwidth = .05, colour = "gray", 
+                 fill = "gray") +
+  geom_vline(xintercept = par$mu[1], linetype = "dashed", color = palette[2], lwd = 1) +
+  geom_vline(xintercept = par$mu[2], linetype = "dashed", color = palette[1], lwd = 1) +
+  stat_function(geom = "line", fun = dnorm, args = list(mean = mean(es)), 
+                aes(colour = "Overall"), lwd = .6, linetype = "dashed") +
+  stat_function(geom = "line", fun = plotcomp,
+                args = list(par$mu[1], par$sigma[1], lam = par$lambda[1]),
+                aes(colour = "Subpopulation 2"), lwd = 1.5) +
+  stat_function(geom = "line", fun = plotcomp,
+                args = list(par$mu[2], par$sigma[2], lam = par$lambda[2]),
+                aes(colour = "Subpopulation 1"), lwd = 1.5) +
+  xlab("Effect Size") +
+  ylab("Density") +
+  ggtitle("D") +
+  scale_color_manual(values = c("black", palette[1], palette[2]),
+                     name = "Distributions") +
+  theme_bw() + 
+  guides(colour = guide_legend(override.aes = list(size = 0.6))) +
+  theme(legend.justification = c(1,0.1), legend.position=c(1, .66), 
+        legend.text=element_text(size=8), legend.title = element_text(size = 9), legend.key.size = unit(0.8, "line")) +
+  theme(axis.line.x = element_line(colour = "black", size=.5, linetype = 1),
+        axis.line.y = element_line(colour = "black", size=.5, linetype = 1),
+        axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
+  
+  #scale_colour_manual(values=c(".3"="green", "1"="red", "5"="blue", "10"="yellow", "20"="orange"), name="Densities")
+
+posterior.plot.es <- ggplot(data = post.es, aes(x = iteration, y = converg1)) +
+  geom_line(color = palette[2], size = 1.5) +
+  geom_line(data = post.es, aes(x = iteration, y = converg2), color = palette[1], size = 1.5) +
+  geom_hline(yintercept = .5, color = "gray50", linetype = "solid", size = 1) +
+  geom_hline(yintercept = par$lambda[1], color = "gray50", linetype = "dashed", size = 1) +
+  geom_hline(yintercept = par$lambda[2], color = "gray50", linetype = "dashed", size = 1) +
+  xlab("Iteration") + ylab(expression(lambda)) + #removed expression(paste(hat(lambda))))
+  ggtitle("C") +
+  default
+
+# Check the means
+mean(par$lambda[1])
+mean(par$lambda[2])
+mean(sempar$lambdahat[1])
+mean(sempar$lambdahat[2])
+
+# Create figure 4
+bottom <- grid.arrange(posterior.plot.es, distrib.plot.es, widths=c(0.3, 0.7), ncol = 2)
+
+# Final, merged plot
+grid.arrange(top, bottom, heights=c(0.4, 0.6), nrow = 2)
+
+# Code for markdown figure
+#![Mixture estimation for the brain training meta-analysis. (A) Testing data from the Expectation-Maximization algorithm indicated that two components should be retained. (B) Estimated log-likelihoods for the two components selected, over the entire set of observations. For readability, only a random, non-consecutive subset ($N = 100$) of the whole vector of effect sizes ($N = 854$) is shown. (C) Estimated mixing weights ($\Phi$) based on posterior likelihoods from the brain training meta-analysis vector of effect sizes. Here, the mixing weights ($\lambda = .83$ and $\lambda = .17$, blue and turquoise lines, respectively) suggest that the data mostly comes from the first distribution, whereas the second is less well represented. (D) Probability densities of effect sizes extracted from the brain training meta-analysis. Densities are retrieved from the mixing weights estimated in A (blue and turquoise density lines). The mixture represented by the blue and turquoise lines is a better fit to the data than the single Gaussian (dotted black line). The corresponding estimated means are shown with the blue and turquoise dashed lines. \label{Figure 3}](figures/figure3-14.pdf)
+
+```
+
+
+# Robustness of the method
+
+The approach we propose is effective in a number of cases and with a wide range of parameters. However, it also has limitations that need to be acknowledged. In some instances, assessments of either the number of components of a mixture or the probability of the mixture distribution may become unreliable. Limitations are inherent to any statistical tool, yet it is important to understand the range of parameters under which the method performs well, so as to anticipate potential pitfalls. We address these limitations in details in the online R code (https://github.com/davidmoreau/MixtureModel), but present some of the main limitations hereafter.
+
+One typical concern pertains to false alarms--specifically, how likely is a researcher to wrongly assume a mixture distribution when the best fit is a single distribution? To evaluate robustness formally, we generated effect size estimates from two underlying models. Model 1 was a single Gaussian, with a unimodal distribution. Model 2 was a mixture model generated from two Gaussian distributions, yielding a bimodal distribution. We aimed to determine how well the EM algorithm performs--how often do we correctly identify from which underlying distribution the data come? 
+
+Our analyses showed that false alarms remain low ($< 5$%) overall for plausible distribution parameters (see Table 1 for details). Generally, the algorithm shows improved performance as the distance between distributions increases. This makes intuitive sense: as the distribution modes spread out, overlap between these distributions increases, making it more difficult to identify the respective source of each data point. Related to this idea, we observed improved performance as $\sigma^2$, the variance of each distribution, decreases. This translates into less overlap between distributions, which for our purpose is akin to a greater distance between modes. In addition, we observed better performance overall for unbalanced $\lambda$ values, that is, when distribution densities are unequal. This suggests that the method might be better suited to picking up subtleties in distribution properties that random-effects modeling alone. Specifically, we observed better performance overall but a rapid decrease in model performance as $\sigma^2$ increases for unbalanced $\lambda$ values, whereas this decrease was less steep for more balanced $\lambda$ values. The correlation between $\delta$ (residuals) and $l(\theta)$ (model fit) was $r = -.53$ ($BF_{10} = 4.27$, assuming a bivariate normal distribution and a uniform prior on $\rho$). The method performs well in a large number of cases, with a fairly wide range of parameters. Only multiple distributions that overlap extensively are difficult to tease apart. Direct estimates of convergence (log-likelihoods) are reported in the R code available with this paper. In all cases presented, convergence checks indicate adequate performance, with only minor fluctuations in subsequent log-likelihoods (see Table 1).
+
+
+|$\sigma^2$ (variance)|$\lambda$ (latent)|$\hat\lambda$ (estimated)|$\delta$ (residuals)|$l(\theta)$ (fit)|
+| ------------ | :------------:        | :------------:         | :------------: | ------------: |
+| 0.1      | .1               | .10                 | .00    | -50.9    |
+|          | .2               | .14                 | .06    | -50.4    |
+|          | .3               | .19                 | .11    | -83.6    |
+|          | .4               | .41                 | .01    | -70.6    |
+|          | .5               | .47                 | .03    | -85.2    |
+| 0.2      | .1               | .10                 | .00    | -72.1    |
+|          | .2               | .30                 | .10    | -93.2    |
+|          | .3               | .47                 | .17    | -98.8    |
+|          | .4               | .29                 | .11    | -91.2    |
+|          | .5               | .26                 | .24    | -103.2   |
+| 0.3      | .1               | .29                 | .19    | -93.2    |
+|          | .2               | .30                 | .10    | -95.3    |
+|          | .3               | .28                 | .02    | -112.2   |
+|          | .4               | .18                 | .22    | -99.6    |
+|          | .5               | .14                 | .36    | -104.4   |
+| 0.4      | .1               | .20                 | .10    | -110.9   |
+|          | .2               | .12                 | .08    | -106.7   |
+|          | .3               | .17                 | .13    | -110.9   |
+|          | .4               | .19                 | .21    | -108.9   |
+|          | .5               | .14                 | .36    | -106.8   |
+
+: Reliability analyses for the normal mixture model estimates. The table shows the results of a Monte Carlo simulation of mixture distributions (N = 100,000 observations per row) each generated from two normal Gaussian N($\mu, \sigma^2$) with fixed means ($\mu = 0; 1$), but incremental variance ($\sigma^2 = .1; .2; .3; .4$) and mixing weights ($\lambda = .1, .9; .2, .8; .3, .7; .4, .6; .5, .5$). For each iteration, we estimated the mixing weights $\hat\lambda$ generated via the EM algorithm. We provide indices of reliability with $\delta$ (residuals of the model) and log-likelihoods $l(\theta)$ (model fit).
+
+
+Note that the algorithm we present in this paper makes an estimate regarding the number of components to be retained, that is, how many distributions are confounded. Ultimately however, the decision to retain a simpler, unimodal model is to be determined by the researcher based on the question at hand; no single algorithm can replace educated assumptions about the plausibility of a distribution. Even so, the degree of belief, rather than mere dichotomous thinking, can be modeled, so as to reflect confidence in a model. When in doubt, a sensible decision is to default to a unimodal distribution [e.g., *N*($\mu, \sigma^2$)]. Importantly, when a mixture distribution is assumed, the influence of posterior probabilities on the model decreases as $\lambda$ approaches 0 (see R code). This combination of algorithm-based mixture estimation and informed decision makes for a process that is fairly robust to overfitting.
+
+Evaluating the robustness of mixture model estimation is also essential for a wide implementation. In the model we presented, we make particular assumptions about the shape of the underlying distribution--specifically, we assumed a normal distribution. We tested the extent to which deviations from normality impair the performance of the algorithm, and found that the method is fairly robust to violations of this assumption [for details, see R code and @Dempster1977]. Importantly, nonparametric or semiparametric alternatives exist and can easily be implemented for all cases where the assumption of normality is violated. In the brain training example, comparisons between values retrieved via parametric and semiparametric showed that densities from both methods were in agreement (see Fig. 3 and online material). More generally, other alternatives exist--for example, one could assign a prior distribution to each parameter, for a fully Bayesian implementation of mixture modeling [e.g., @Marin2005]. The approach we presented here is by no means the only one designed for this kind of problems, but it is a method that has shown to perform well in various circumstances [@Dempster1977].
+
+
+# Concluding Remarks
+Through modeling and simulations, we have illustrated a potentially pervasive problem in the context of replication and meta-analysis: different underlying distributions conflated together in meta-analytic models. In a simple but detrimental manifestation of this problem, some results in the literature may come from null effects ($H_0$), whereas others come from true positive effects ($H_1$). In more complex scenarios, this rationale can be extended to accommodate multimodal distributions, yet the inherent problems remain the same--typical models are sometimes too coarse to accurately aggregate a series of studies, and thus are at risk of misrepresenting overall trends and findings. Rather than solely relying on random-effect models--which can account for some but not all of the problems associated with mixture distributions--we have argued that meta-analytic methods should evaluate these discrepancies directly, by estimating the plausibility of mixture models and the corresponding mixing weights. This process allows for the identification of multimodality in distributions and refined estimates of effect sizes, paving the way for more accurate predictions and informed decisions based on all the evidence accumulated on a specific research question. In closing, we would like to leave the reader with a few related thoughts.
+
+First, the discussion we hope to stir in the context of meta-analysis in psychology has direct implications for replications. Although encouraging replication is a definite step forward, the degree to which combinations of studies are informative is contingent upon the use of appropriate aggregating methods. Specifically, and despite recent promising directions [e.g. @Dreber2015; @Earp2015], disagreements remain regarding how to best determine whether a replication is supportive or unsupportive of the original study [@Simonsohn2015; @Verhagen2014]. There is currently no clear consensus concerning valid criteria for successful replications. Should it be statistical significance? Neighboring effect sizes? Subjective ratings? Or similar implications between studies regarding applied policies, such as health recommendations? For excellent discussions on this topic, see @Brandt2014 and @Makel2012. 
+
+To make interpretations even more difficult, original studies and replications often yield a wide range of effect size estimates, varying from one extreme to another. In this context, inferences about true effect sizes can be particularly arduous. Part of the discrepancies in the interpretation of replications lies in false dichotomous thinking, with replication studies being framed as “successful” or “unsuccessful”. Well-powered replications are thought to bring a sense of resolution, a final verdict on a research question. This is hardly ever the case. Besides being ill posed, this position does not allow for constructive or solvable answers. Rather, questions addressing the extent to which a replication study provides independent evidence for the presence of an effect, or for a given theory, are useful and help the field move forward. All evidence is of importance, and ironically, converting a fine-grained, continuous estimate into a binary characterization is akin to lowering statistical power--precisely what researchers are trying to avoid.
+
+Promising solutions have been proposed to better model predictions in a replication context [@Brandt2014; @Simonsohn2015; @Spence2016; @Verhagen2014], within a dynamic that allows finer assessments of the literature. Many of these solutions have emphasized the role of power analyses to design more robust replications [@Lakens2014; @Perugini2014]. Some researchers have suggested heuristics to help guide researchers planning a replication, such as taking 2.5 times the sample size of the original study [@Simonsohn2015], or simply maximizing power [@Brandt2014]. This current emphasis on power analysis is not coincidental--one of its appeals is its simplicity in providing a specific sample size based on effect size averages. In the case of one single distribution of effect size, increasing power is indeed the adequate way to increase accuracy. 
+
+As informative as these recommendations might be, they do not address a fundamental source of discrepancy in successive results--sampling from different underlying populations. If multiple distributions are allowed to contribute to a given effect, whether it is within a given study, across studies, or both, typical methods of aggregating data can yield spurious results [e.g., @Speelman2013]. Power is therefore part of the answer, but it is not sufficient in and of itself. Traditional methods for improving the strength of an experimental design typically do not take into account discrepancies in underlying distributions, or only partially [e.g., random effects models, @Hedges1998], and in this regard do not provide adequate safeguards against conceptual inaccuracies. These limitations need to be acknowledged, especially when results appear to be disparate.
+
+With this in mind, we have also emphasized that inferring plurimodality in effect size distributions is not without pitfalls. When misapplied, it can lead to biased or erroneous assessments of a body of work, and provide misleading recommendations concerning the power of a replication. Although advances in computing and statistics allow refining probabilistic estimates via stochastic simulations (e.g., Markov chain Monte Carlo) complemented with advanced methods to cope with uncertainty [see for example @Alfaro2003; @Liu2012; @Rubinstein2011], these techniques only refine assessments if probabilities can be accurately estimated in the first place. Perhaps most importantly, for the posterior probabilities to be most accurate, all studies should be published [@vanAssen2014]. This gives additional weight to recent initiatives that either encourage preregistration of all studies (e.g. Open Science Framework, AsPredicted) or at least promote the use of data repositories. In practice, this allows determining the power of a study based on an accurate estimate for the probability of a planned test to detect an effect, rather than via distribution-agnostic power analyses.
+
+Finally, one broader lesson here is that in some instances (and contrary to common claims), more research is not needed, because the amount of data available exceeds what is necessary to make accurate estimates. Arguably, this is especially true in the behavioral sciences, because numerous experiments are not theory-driven, at least not in the sense of a unified theory to explain brain-behavior interactions. Rather than additional data, what is often lacking are better methods to aggregate prior studies, in order to increase the quality of meta-analyses. In this dynamic, testing for mixture distributions has the potential to greatly refine estimates of effect sizes and improve interpretations of overall bodies of research--critical aspects for stronger, more accurate science. 
+\newpage
+
+
+
+[^1]: The exact figure changes slightly based on the specific criterion used to determine successful replications (SR). When estimated from statistical significance, SR = .36; when based on subjective ratings, SR = .39. Finally, when inferred from effect sizes (overlapping 95% CIs), SR = .47.
+
+[^2]: The restricted maximum-likelihood method is usually preferable to maximum likelihood models because the latter is biased when sample size is small. As N increases, results from both methods tend to converge [see for an in-depth discussion @Kelley2012].
+
+
+
+```{r Box1_Figure1, include=FALSE}
+library("HistData")
+
+data(GaltonFamilies)
+
+fathermother <- c(GaltonFamilies$father, GaltonFamilies$mother)
+conf.distrib.plot <- as.data.frame(fathermother) %>%
+  ggplot(aes(fathermother, ..density..)) + 
+  geom_histogram(fill = palette[4], alpha = .8) + 
+  geom_density(aes(fathermother, ..density..), color = palette[4], size = 1, adjust = 3.5) +
+  xlab("Height") + ylab("Density") +
+  ggtitle("A") +
+  default; conf.distrib.plot
+
+sep.distrib.plot <- ggplot(GaltonFamilies, aes(father, ..density..)) + 
+  geom_histogram(fill =  palette[1], alpha = .8) + 
+  geom_histogram(data = GaltonFamilies, aes(mother, ..density..), fill =  "#58b2d9", alpha = .8) + 
+  geom_density(data = GaltonFamilies, aes(father), color= palette[1], size=1, adjust = 3.5) +
+  geom_density(data = GaltonFamilies, aes(mother), color= "#58b2d9", size=1, adjust = 3.5) +
+  xlab("Height") + ylab("Density") +
+  ggtitle("B") +
+  default; sep.distrib.plot
+
+grid.arrange(conf.distrib.plot, sep.distrib.plot, ncol = 1)
+
+```
+
+\noindent
+\fbox{\parbox{\textwidth}{
+\textbf{Box 1. The general mixture model framework}
+
+\footnotesize 
+\setlength{\parindent}{1cm} 
+Mixture models are used to make inferences about properties of subpopulations contained within a larger population. Suppose we plot the distribution of heights across a population of individuals (data retrieved from Friendly, 2017). If we fit a density distribution to the histogram, we can see the general trend of the distribution (Fig. 1A). In this example, it is rather obvious that the underlying distribution is bimodal--that is, it contains two different distributions, with two modes. Here, the explanation is straightforward: the distribution includes heights from men and women, conflated together. When plotted separately, with distinct model fits, the reason for bimodality appears clear (Fig. 1B).
+
+\begin{center}
+  \includegraphics[width = .7\textwidth]{figures/Box1_Figure1-3.pdf}
+  \parbox{.7\textwidth}{\scriptsize \textit{Box 1 -- Figure 1.} Distribution of heights in a population of men and women. (A) Overall, the distribution appears to be bimodal--the density line does not fit the data well. (B) When men and women are separated, the underlying trend is clearer: men are taller than women on average, although there is some overlap between the two subpopulations. Separate density lines are better fit to the data.}
+\end{center}
+
+Here, we know which observations are measurements from men and which are measurements from women. However, this is not always the case--oftentimes, subpopulations are not known, or at least not identified. Yet, we can estimate the shapes and modes of the two distributions, together with the probability of coming from either of these distributions for each data point. Importantly, the number of subpopulations is not limited to two, such that the overall framework can accommodate multiple subpopulations. In this context, the general mixture model framework is a way to mathematically represent subpopulations contained within a population. According to the framework, we can formally estimate densities of each value $x_i$ in a vector as follows:
+
+$$g_\theta (x_i)= \sum_{j=1}^{m} \lambda_j \phi_j (x_i),        x_i \in R^r \qquad\qquad(1)$$
+where: $$\theta  = (\lambda, \phi) = (\lambda_1,..., \lambda_m, \phi1,..., \phi) \qquad\qquad(2)$$
+denotes the parameter, with $\lambda_m \geqslant0$, and $\phi_j$ drawn from a family of continuous multivariate distributions. In the special case we present in the paper, that is, assuming normality of all distributions, the model parameter reduces to:
+$$\theta  = (\lambda,(\mu_1,\sigma_1^2 ),…,(\mu_m,\sigma_m^2 )) \qquad\qquad(3)$$ 
+This is because the model parameter of a normal distribution is defined by a mean and variance. However, the same model (1) can accommodate distributions that are non-normal. So, how exactly can we estimate the probabilities of coming from a given distribution (i.e., subpopulation) for each data point? One of the possible solutions to this problem lies with the Expectation-Maximization algorithm. We discuss it in more details in Box 2.
+}}
+
+\noindent
+\fbox{\parbox{\textwidth}{
+\textbf{Box 2. Estimating posterior likelihoods with the Expectation-Maximization (EM) algorithm}
+
+\footnotesize
+\setlength{\parindent}{1cm} 
+In this paper, we use the Expectation-Maximization (EM) algorithm to identify underlying distributions of effect sizes, and to compute the respective probabilities for each effect size to belong to a given distribution (for an accessible primer, see Do \& Batzoglou, 2008). There are other ways to identify the nature of a distribution, such as the more general MM algorithm (Hunter \& Lange, 2004) or the widely-used Newton-Raphson method (Ben-Israel, 1966); here we chose to use the EM algorithm because it is fairly inexpensive computationally, and only makes few assumptions. This allows adaptations to a wide range of problems, with varying distribution properties.
+
+Specifically, the EM algorithm provides a way to find maximum likelihood solutions for models whose variables are unobserved, or latent. In this context, the EM algorithm maximizes the operator:
+$$Q(\theta|\theta^{(t)}) = E [\log \ h_\theta (C) | x, \theta^{(t)}] \qquad\qquad(4)$$
+where $\theta^{(t)}$ is the value at iteration $t$, and the expectation step concerns $k_{\theta} (c|x)$ for the value $\theta^{(t)}$ of the parameter. The first step (E) is to compute (4); the second step (M) is to set: 
+$$\theta^{(t + 1)} = argmax_{\theta \in \Phi} Q(\theta | \theta^{(t)}) \qquad\qquad(5)$$
+Based on the EM iterative algorithm, if a unimodal distribution is more likely, or if there is insufficient evidence for a mixture distribution, the assumption of a single underlying distribution is retained. In this case, no further estimate is required. If there is evidence for a mixture distribution (as defined by the likelihoods), we generate posterior probabilities of belonging to a given distribution, for each data point. In the specific case we have described herein, this represents the probability of belonging to distribution A or B, where $\theta = (\lambda, (\mu_A, \sigma_A^2 ),(\mu_B,\sigma_B^2))$. Note that at that stage the greater likelihood of a bimodal model (i.e. mixture) compared to a unimodal model, given the data, has already been established. Finally, convergence, the point of equilibrium in the EM algorithm, is given by the log-likelihood:
+$$ln P(X| \mu,\sigma,\alpha)=\sum_{n=1}^N ln\sum_{k=1}^K \alpha_k N(x_n |\mu_k , \sigma_k^2 ) \qquad\qquad(6)$$
+
+Mixture model estimation typically uses the log-likelihood, rather than the likelihood. This is to avoid dealing with extremely small values, which can introduce unnecessary computational problems. The larger the log-likelihood, the better the model parameters fit the data. The final result of the EM algorithm gives a probability distribution of the estimated latent variables, in conjunction with point estimates for $\theta$ (either a maximum likelihood estimate or a posterior mode). Note that in a fully Bayesian version of the approach, one can estimate a probability distribution over both $\theta$ (treated as a latent variable) and the estimated latent variables. 
+
+In cases where the assumption of normality is violated, nonparametric or semiparametric alternatives that do not assume that parameter values of $\phi_j$ in the original algorithm are drawn from a family of continuous multivariate distributions can be implemented. Assuming that all observations in $x_i$ are conditionally independent, the model can be rewritten as:
+$$g_\theta (x_i ) = \sum_{j=1}^m \lambda_j \prod_{k=1}^r f_{jk}  (x_{ik}) \qquad\qquad(7)$$
+where $f_{jk}$ denotes a univariate density function that is not assumed to come from a family of densities defined by a finite-dimensional parameter vector, and densities are estimated via nonparametric density methods. This more general definition of a mixture model allows applications to a larger set of problems.
+}}
+
+
+
+---
+nocite: | 
+  @Friendly2017
+  @Do2008
+  @Hunter2004
+  @Ben-Israel1966
+...
+
+
+# Author Contributions
+DM and MCC jointly generated the idea for the study. DM programmed all simulations and methods, wrote the paper, and created the online repository. Both authors critically edited the manuscript, and approved the final submitted version.
+
+
+# References
