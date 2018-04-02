@@ -1,0 +1,748 @@
+Reference,Entry in reference,Analysis description ,# of effect sizes,tau,tau^2,Q,I^2,Type of ES,Test for publication bias,Publication bias? ,Publication bias recoded
+Snyder 2013,1,inhibition,48,0.3,0.09,109.67,57.14415975,Cohen's d,trim-and-fill,no,0
+Snyder 2013,2,shifting,69,0.244948974,0.06,133.83,49.18926997,Cohen's d,trim-and-fill,no,0
+Snyder 2013,3,updating,10,0.509901951,0.26,35.22,74.44633731,Cohen's d,trim-and-fill,no,0
+Snyder 2013,4,verbal working memory,39,0.2,0.04,65.59,42.06433908,Cohen's d,trim-and-fill,no,0
+Snyder 2013,5,visuospatial working memory,23,0.223606798,0.05,38.01,42.12049461,Cohen's d,trim-and-fill,no,0
+Snyder 2013,6,planning,17,0.173205081,0.03,23.4,31.62393162,Cohen's d,trim-and-fill,no,0
+Snyder 2013,7,verbal fluency,46,0.264575131,0.07,100.43,55.19267151,Cohen's d,trim-and-fill,no,0
+Snyder 2013,8,psychomotor speed,23,0.331662479,0.11,63.24,65.21189121,Cohen's d,trim-and-fill,no,0
+Snyder 2013,9,digit-symbol substitution,22,0.412310563,0.17,88.76,76.34069401,Cohen's d,trim-and-fill,no,0
+Snyder 2013,10,vocabulary,36,0.173205081,0.03,47.81,26.79355783,Cohen's d,trim-and-fill,no,0
+Uttal et al. 2013,1,training spatial skills,206,0.430116263,0.185,,,Hedges' g,fail-safe N,no,0
+Sweeny & Krizan 2013,1,temporal decline in expectations,71,0.4,0.16,3339.5,97.90387783,Cohen's d,fail-safe N/trim-and-fill,yes,1
+Balliet & van Lange 2013,1,expectations and cooperation,142,0.346410162,0.12,,,Pearson's r,trim-and-fill/Egger test,no,0
+Balliet & van Lange 2013,2,trust and cooperation,60,0.173205081,0.03,,,Pearson's r,trim-and-fill/Egger test,no,0
+Freund & Kasten 2012,1,self-estimates of cognitive ability,154,0.122474487,0.015,,,Pearson's r,funnel plot,no,0
+Richardson et al. 2012,1,socioeconomic status and GPA,21,0,0,221.26,90.96086053,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,2,sex and GPA,21,0.01,0.0001,121.9,83.59310911,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,3,age and GPA,17,0.01,0.0001,353.49,95.47370506,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,4,high school GPA and GPA,46,0.03,0.0009,1368.25,96.71112735,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,5,SAT and GPA,29,0.01,0.0001,258.59,89.17204842,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,6,ACT and GPA,21,0.01,0.0001,314.49,93.64049731,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,7,A level points and GPA,4,0.01,0.0001,12.07,75.14498757,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,8,intelligence and GPA,35,0.01,0.0001,117.94,71.17178226,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,9,conscientiousness and GPA,69,0,0,165.12,58.81782946,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,10,procrastination and GPA,10,0,0,13.77,34.64052288,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,11,openness and GPA,52,0,0,118.6,56.99831366,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,12,neuroticism and GPA,58,0.01,0.0001,163.7,65.1802077,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,13,agreeableness and GPA,47,0,0,103.05,55.36147501,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,14,extraversion and GPA,58,0,0,137.35,58.50018202,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,15,need for cognition and GPA,5,0.01,0.0001,22.08,81.88405797,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,16,emotional intelligence and GPA,14,0,0,21.37,39.16705662,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,17,locus of control and GPA,13,0.02,0.0004,44.85,73.24414716,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,18,pessimistic attributional style and GPA,8,0.03,0.0009,26.89,73.96801785,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,19,optimism and GPA,6,0,0,7.46,32.97587131,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,20,academic self-efficacy and GPA,67,0.01,0.0001,497.07,86.72219205,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,21,performance self-efficacy and GPA,4,0,0,10.63,71.77798683,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,22,self-esteem and GPA,21,0.01,0.0001,40.54,50.66600888,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,23,academic intrinsic motivation and GPA,22,0.02,0.0004,137.81,84.76162833,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,24,academic extrinsic motivation and GPA,10,0.01,0.0001,21.91,58.92286627,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,25,learning goal orientation and GPA,60,0,0,114.25,48.35886214,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,26,performance goal orientation and GPA,60,0.01,0.0001,184.97,68.10293561,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,27,performance avoidance goal orientation and GPA,31,0.01,0.0001,113.73,73.62173569,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,28,grade goal and GPA,13,0.01,0.0001,37.75,68.21192053,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,29,test anxiety and GPA,29,0.01,0.0001,93.4,70.02141328,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,30,rehearsal and GPA,11,0.02,0.0004,45.57,78.05573842,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,31,organization and GPA,6,0,0,18.38,72.79651795,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,32,elaboration and GPA,12,0.01,0.0001,58,81.03448276,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,33,critical thinking and GPA,9,0,0,5.39,0,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,34,metacognition and GPA,9,0,0,30.18,73.49237906,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,35,effort regulation and GPA,19,0,0,21.2,15.09433962,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,36,help seeking and GPA,8,0.01,0.0001,15.71,55.44239338,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,37,peer learning and GPA,4,0.02,0.0004,28.6,89.51048951,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,38,time/study management and GPA,7,0,0,17.1,64.9122807,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,39,concentration and GPA,12,0,0,12.77,13.86061081,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,40,deep approach to learning and GPA,23,0,0,54.82,59.86866107,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,41,surface approach to learning and GPA,22,0.07,0.0049,190.31,88.96537229,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,42,strategic approach to learning and GPA,15,0.02,0.0004,50.09,72.05030944,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,43,social integration and GPA,15,0.01,0.0001,111.98,87.49776746,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,44,academic integration and GPA,11,0.01,0.0001,134.96,92.59039715,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,45,institutional integration and GPA,18,0,0,51.42,66.93893427,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,46,goal commitment and GPA,10,0,0,53.03,83.02847445,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,47,social support and GPA,14,0,0,36.26,64.14782129,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,48,stress and GPA,8,0,0,12.03,41.81213633,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,49,academic stress and GPA,4,0,0,5.89,49.06621392,Corrected Pearson's r,trim-and-fill,yes,1
+Richardson et al. 2012,50,depression and GPA,17,0.01,0.0001,92.91,82.77903347,Corrected Pearson's r,trim-and-fill,yes,1
+Byron & Khazanchi 2012,1,creativity contingent rewards and creativity,34,0.331662479,0.11,93.3,64.63022508,Hedges' g,NA,NA,NA
+Byron & Khazanchi 2012,2,performance contingent rewards and creativity,26,0.387298335,0.15,85.38,70.71913797,Hedges' g,NA,NA,NA
+Byron & Khazanchi 2012,3,completion contingent rewards and creativity,18,0.264575131,0.07,32.08,47.0074813,Hedges' g,NA,NA,NA
+Byron & Khazanchi 2012,4,creativity contingent rewards and creativity (nonexperimental studies),8,0,0,3.9,0,Pearson's r,NA,NA,NA
+Lanaj et al. 2012,1,work-related outcomes,125,0.26,0.0676,1164.15,89.34845166,Corrected Pearson's r,publication status as moderator,yes,1
+Else-Quest et al. 2012,1,guilt,307,0.11,0.0121,2119.94,85.56562922,Cohen's d,NA,NA,NA
+Else-Quest et al. 2012,2,shame,232,0.1,0.01,1627.12,85.80313683,Cohen's d,NA,NA,NA
+Else-Quest et al. 2012,3,embarrassment,48,0.12,0.0144,581.54,91.9180108,Cohen's d,NA,NA,NA
+Else-Quest et al. 2012,4,authentic pride,93,0.04,0.0016,749.66,87.72776992,Cohen's d,NA,NA,NA
+Else-Quest et al. 2012,5,hubristic pride,17,0.12,0.0144,250.45,93.6114993,Cohen's d,NA,NA,NA
+Sedlmeier et al. 2012,1,combined psychological variables,125,0.088317609,0.0078,,,Pearson's r,fail-safe N,yes,1
+Murayama & Elliot 2012,1,trait competitiveness,65,0.1,0.01,,,Pearson's r,NA,NA,NA
+Murayama & Elliot 2012,2,perceived environmental competitiveness,33,0.141421356,0.02,,,Pearson's r,NA,NA,NA
+Murayama & Elliot 2012,3,structural competition,81,0.469041576,0.22,,,Hedges' g,NA,NA,NA
+Hostetter 2011,1,gestures and communication,63,0.411096096,0.169,153.59,59.63278859,Cohen's d,fail-safe N,no,0
+Sitzmann & Ely 2011,1,goal level,24,0.173205081,0.03,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,2,planning,9,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,3,monitoring,12,0.223606798,0.05,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,4,metacognition,77,0.141421356,0.02,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,5,attention,39,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,6,learning strategies,72,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,7,persistence,30,0.173205081,0.03,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,8,time management,31,0,0,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,9,environmental structuring,6,0,0,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,10,help seeking,24,0.2,0.04,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,11,pretraining motivation,52,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,yes,1
+Sitzmann & Ely 2011,12,motivation,67,0.173205081,0.03,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,13,emotion control,9,0,0,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,14,effort,61,0.2,0.04,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,15,attributions,35,0.141421356,0.02,,,Corrected Pearson's r,publication status as moderator,no,0
+Sitzmann & Ely 2011,16,pretraining self-efficacy,86,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,yes,1
+Sitzmann & Ely 2011,17,self-efficacy,160,0.2,0.04,,,Corrected Pearson's r,publication status as moderator,yes,1
+Balliet et al. 2011,1,punishment and cooperation,126,0.53,0.2809,1322,90.54462935,Cohen's d,trim-and-fill/fail-safe N,no,0
+Balliet et al. 2011,2,rewards and cooperation,33,0.45,0.2025,130.24,75.42997543,Cohen's d,trim-and-fill/fail-safe N,no,0
+Haedt-Matt & Keel 2011,1,pre-binge vs. average negative affect,17,0.325576412,0.106,69.62,77.01809825,Standardized mean gains,fail-safe N,no,0
+Haedt-Matt & Keel 2011,2,pre-binge vs. pre-regular eating negative affect,14,0.487852437,0.238,93.25,86.05898123,Standardized mean gains,fail-safe N,no,0
+Haedt-Matt & Keel 2011,3,post-binge vs. pre-binge negative affect,14,0.2,0.04,30.86,57.8742709,Standardized mean gains,fail-safe N,no,0
+Haedt-Matt & Keel 2011,4,purging and negative affect,3,0.164316767,0.027,3.59,44.28969359,Standardized mean gains,fail-safe N,yes,1
+Haedt-Matt & Keel 2011,5,pre-binge and post-purge negative affect,3,0,0,1.02,0,Standardized mean gains,fail-safe N,yes,1
+Koenig et al. 2011,1,think manager-think male paradigm (men-leaders),51,0.26,0.0676,321.65,84.45515312,Cohen's d,trim-and-fill/egger test,no,0
+Koenig et al. 2011,2,think manager-think male paradigm (women-leaders),49,0.22,0.0484,241.77,80.14642015,Cohen's d,trim-and-fill/egger test,no,0
+Koenig et al. 2011,3,agency-communion paradigm,48,0.55,0.3025,615.79,92.36752789,Hedges' g,trim-and-fill/egger test,yes,1
+Koenig et al. 2011,4,masculinity-femininity paradigm,101,0.51,0.2601,223.09,55.17504146,Hedges' g,trim-and-fill/egger test,no,0
+Hartwig & Bond Jr. 2011,1,response length,19,0.18,0.0324,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,2,details,5,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,3,sensory information,3,0.38,0.1444,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,4,block access to information,11,0.25,0.0625,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,5,response latency,16,0.2,0.04,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,6,speech rate,15,0.24,0.0576,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,7,plausibility,11,0.21,0.0441,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,8,logical structure,7,0.12,0.0144,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,9,ambivalent,7,0.41,0.1681,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,10,involved,5,0.23,0.0529,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,11,verbal and vocal involvement,5,0.14,0.0196,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,12,expressive face,6,0.17,0.0289,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,13,illustrators,9,0.36,0.1296,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,14,verbal immediacy,2,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,15,self references,11,0.23,0.0529,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,16,mutual references,2,0.2,0.04,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,17,other references,3,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,18,vocal immediacy,13,0.22,0.0484,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,19,eye contact,19,0.05,0.0025,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,20,gaze aversion,5,0.06,0.0036,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,21,vocal uncertainty,10,0.25,0.0625,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,22,shrugging,6,0.07,0.0049,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,23,non-ah disturbances,8,0.11,0.0121,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,24,unfilled pauses,13,0.22,0.0484,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,25,ah disturbances,14,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,26,total disturbances,11,0.02,0.0004,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,27,non fluent,9,0.19,0.0361,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,28,active body,3,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,29,postura shifts,12,0.04,0.0016,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,30,head movements,9,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,31,hand gestures,10,0.07,0.0049,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,32,arm movements,2,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,33,foot/leg movements,5,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,34,friendly,13,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,35,cooperative,14,0.29,0.0841,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,36,attractive,20,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,37,negative statements,9,0.29,0.0841,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,38,pleasant voice,2,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,39,pleasant face,6,0.22,0.0484,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,40,head nodding,5,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,41,smiling,21,0.26,0.0676,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,42,nervous,15,0.24,0.0576,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,43,pitch,5,0.22,0.0484,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,44,relaxed posture,2,0.43,0.1849,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,45,blinking,8,0.01,0.0001,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,46,object fidgeting,2,0.52,0.2704,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,47,self-fidgeting,11,0.15,0.0225,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,48,facial fidgeting,3,0.27,0.0729,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,49,fidgeting,9,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,50,self-deprecating,4,0.27,0.0729,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,51,embedding,2,0.47,0.2209,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,52,behavior segments,3,0.16,0.0256,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,53,realistic,2,0.23,0.0529,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,54,indifferent,3,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,55,not spontaneous,2,0.29,0.0841,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,56,thinking hard,4,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,57,serious,4,0.27,0.0729,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,58,competent,6,0.32,0.1024,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,59,ingratiating,2,0,0,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,60,admit responsibility,2,0.15,0.0225,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,61,nonverbal deception pose,12,0.04,0.0016,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,62,verbal deception pose,10,0.21,0.0441,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,63,messy clothes,2,0.32,0.1024,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,64,weird behaviors,7,0.25,0.0625,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,65,foreign language,5,0.45,0.2025,,,Pearson's r,NA,NA,NA
+Hartwig & Bond Jr. 2011,66,baby face,14,0.23,0.0529,,,Pearson's r,NA,NA,NA
+Szalma & Hancock 2011,1,performance,797,0.905538514,0.82,,,Hedges' g,NA,NA,NA
+"Balliet, Li et al. 2011",1,sex and cooperation,176,0.29,0.0841,637.21,72.53652642,Cohen's d,trim-and-fill/egger test,no,0
+Petersen & Hyde 2010,1,petting (I),38,0.223606798,0.05,1241.47,97.01966217,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,2,intercourse (F),49,0.316227766,0.1,966.19,95.03203304,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,3,intercourse (I),394,0.264575131,0.07,12513.17,96.85930903,Cohen's d,Egger test,yes,1
+Petersen & Hyde 2010,4,age at first sex,127,0.608276253,0.37,15717.98,99.19837027,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,5,number of partners,256,0.282842712,0.08,8672.43,97.05964764,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,6,oral sex (I/F),81,0.1,0.01,693.05,88.4568213,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,7,anal sex (I/F),72,0.141421356,0.02,1083.23,93.44552865,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,8,casual sex (I/F),69,0.331662479,0.11,3199.99,97.87499336,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,9,same-gender sex (I/F),76,0.141421356,0.02,1413.68,94.69469753,Cohen's d,Egger test,yes,1
+Petersen & Hyde 2010,10,extramarital sex (I/F),30,0.3,0.09,715.46,95.94666368,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,11,condom use (I/F),278,0.223606798,0.05,6405.56,95.67563179,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,12,masturbation (I/F),66,0.509901951,0.26,2518.13,97.41871945,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,13,pornography (I/F),25,0.565685425,0.32,1756.69,98.63379424,Cohen's d,Egger test,yes,1
+Petersen & Hyde 2010,14,cybersex (I/F),3,0,0,0.88,0,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,15,general permissiveness,29,0.223606798,0.05,147.68,81.04008667,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,16,premarital sex,41,0.331662479,0.11,1597.64,97.49630705,Cohen's d,Egger test,yes,1
+Petersen & Hyde 2010,17,casual sex,10,0.173205081,0.03,36.85,75.57666214,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,18,extramarital sex,10,0.173205081,0.03,71.45,87.40377887,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,19,sex when engaged,6,0.282842712,0.08,85.74,94.16841614,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,20,sex with commitment,10,0.458257569,0.21,287.92,96.8741317,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,21,masturbation,10,0.264575131,0.07,80.91,88.87652948,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,22,condom use,17,0.469041576,0.22,1094.21,98.53775783,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,23,double standard,7,0.141421356,0.02,17.49,65.69468268,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,24,fear/anxiety/guilt,5,0.316227766,0.1,55.55,92.79927993,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,25,sexual satisfaction,29,0.173205081,0.03,443.26,93.68316564,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,26,homosexuality,58,0.282842712,0.08,497.57,88.54432542,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,27,gay men,40,0.173205081,0.03,388.31,89.95647807,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,28,lesbians,28,0.1,0.01,92.39,70.77605801,Cohen's d,Egger test,yes,1
+Petersen & Hyde 2010,29,gay rights,3,0.173205081,0.03,9.07,77.94928335,Cohen's d,Egger test,no,0
+Petersen & Hyde 2010,30,gay marriage,3,0.141421356,0.02,8.33,75.99039616,Cohen's d,Egger test,no,0
+Lim & Dinges 2010,1,simple attention: lapses,17,0.09486833,0.009,112.18,85.73720806,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,2,simple attention: reaction time,26,0.070710678,0.005,97.04,74.23742786,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,3,complex attention: accuracy,25,0.083666003,0.007,56.79,57.73903856,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,4,complex attention: reaction time,37,0.054772256,0.003,192.57,81.3054993,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,5,processing speed: accuracy,12,0.130384048,0.017,72.99,84.92944239,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,6,processing speed: reaction time,20,0.083666003,0.007,194.77,90.24490425,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,7,working memory: accuracy,26,0.09486833,0.009,113.79,78.02970384,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,8,working memory: reaction time,17,0.09486833,0.009,92.95,82.78644432,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,9,short-term memory: recall,12,0.134164079,0.018,37.85,70.93791281,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,10,short-term memory: recognition,5,0.126491106,0.016,13.91,71.24370956,Cohen's d,NA,NA,NA
+Lim & Dinges 2010,11,reasoning: accuracy,12,0.070710678,0.005,14.59,24.60589445,Cohen's d,NA,NA,NA
+Hofmann et al. 2010,1,evaluative conditioning,652,0.346410162,0.12,706.97,7.916884733,Cohen's d,Egger test,no,0
+Hulleman et al. 2010,1,performance outcomes and PAp,98,0.1,0.01,374.77,74.11745871,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,2,performance outcomes and PAv,63,0.1,0.01,238.16,73.96708095,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,3,performance outcomes and MAp,95,0.1,0.01,416.82,77.44829903,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,4,performance outcomes and MAv,12,0.1,0.01,23.26,52.70851247,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,5,interest and PAp,52,0.1,0.01,203.52,74.94103774,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,6,interest and PAv,34,0.141421356,0.02,169.92,80.57909605,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,7,interest and MAp,52,0.2,0.04,633.3,91.94694458,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,8,interest and MAv,9,0.1,0.01,18.05,55.67867036,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,9,goal-goal correlations PAp-Map,193,0.223606798,0.05,2574.89,92.54337078,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,10,goal-goal correlations PAp-Pav,147,0.244948974,0.06,2943.55,95.04000272,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,11,goal-goal correlations PAp-Mav,37,0.141421356,0.02,219.01,83.56239441,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,12,goal-goal correlations MAp-Pav,141,0.173205081,0.03,1329.12,89.46671482,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,13,goal-goal correlations MAp-Mav,37,0.141421356,0.02,285.99,87.41214728,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,14,goal-goal correlations PAv-MAv,36,0.1,0.01,234.54,85.07717234,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,15,reliabilities PAp,195,0.264575131,0.07,5297.65,96.33799892,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,16,reliabilities PAv,143,0.173205081,0.03,1825.8,92.22258736,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,17,reliabilities MAp,189,0.2,0.04,4009.99,95.31170901,Pearson's r,publication status as moderator,NA,NA
+Hulleman et al. 2010,18,reliabilities MAv,34,0.244948974,0.06,495.81,93.3442246,Pearson's r,publication status as moderator,NA,NA
+Hagger et al. 2010,1,ego depletion and self-control,198,0.2,0.04,301.79,34.7228205,Corrected Cohen's d,NA,NA,NA
+Connelly & Ones 2010,1,emotional stability and single-rater interrater reliability,72,0.15,0.0225,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,2,extraversion and single-rater interrater reliability,82,0.13,0.0169,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,3,openness and single-rater interrater reliability,53,0.14,0.0196,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,4,agreeableness and single-rater interrater reliability,83,0.15,0.0225,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,5,conscientiousness and single-rater interrater reliability,64,0.14,0.0196,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,6,emotional stability and self-other consensus,148,0.19,0.0361,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,7,extraversion and self-other consensus,186,0.17,0.0289,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,8,openness and self-other consensus,105,0.2,0.04,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,9,agreeableness and self-other consensus,151,0.12,0.0144,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,10,conscientiousness and self-other consensus,145,0.19,0.0361,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,11,emotional stability and predicting first impressions (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,12,emotional stability and predicting first impressions (self-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,13,extraversion and predicting first impressions (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,14,extraversion and predicting first impressions (self-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,15,openness and predicting first impressions (other-ratings),5,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,16,openness and predicting first impressions (self-ratings),5,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,17,agreeableness and predicting first impressions (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,18,agreeableness and predicting first impressions (self-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,19,conscientiousness and predicting first impressions (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,20,conscientiousness and predicting first impressions (self-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,21,emotional stability and predicting academic achievement (other-ratings),6,0.19,0.0361,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,22,extraversion and predicting academic achievement (other-ratings),7,0.47,0.2209,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,23,openness and predicting academic achievement (other-ratings),4,0.22,0.0484,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,24,agreeableness and predicting academic achievement (other-ratings),6,0.09,0.0081,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,25,conscientiousness and predicting academic achievement (other-ratings),9,0.24,0.0576,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,26,emotional stability and predicting job performance (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,27,extraversion and predicting job performance (other-ratings),6,0.15,0.0225,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,28,openness and predicting job performance (other-ratings),6,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,29,agreeableness and predicting job performance (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Connelly & Ones 2010,30,conscientiousness and predicting job performance (other-ratings),7,0,0,,,Corrected Pearson's r,NA,NA,NA
+Lindberg et al. 2010,1,gender and mathematics (excluding national data sets),441,0.836660027,0.7,11478.74,96.16682667,Cohen's d,NA,NA,NA
+Lindberg et al. 2010,2,gender and mathematics (including national data sets),56,0.031622777,0.001,393.04,86.00651333,Cohen's d,NA,NA,NA
+Sio & Ormerod 2009,1,incubation and problem solving,117,0.288790582,0.0834,173.99,33.3295017,Cohen's d,funnel plot/Egger test,no,0
+van den Bussche et al. 2009,1,subliminal priming,88,0.387298335,0.15,,,Cohen's d,publication status as moderator/funnel plot,no,0
+Denson et al. 2009,1,cortisol,204,0.21,0.0441,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,2,NK cells,81,0.13,0.0169,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,3,NKCC,34,0.02,0.0004,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,4,other measures of natural immunity,41,0.01,0.0001,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,5,total lymphocytes,29,0.04,0.0016,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,6,T lymphocytes,34,0.42,0.1764,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,7,T helper cells,54,0.06,0.0036,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,8,T cytotoxic cells,58,0.06,0.0036,,,Cohen's d,NA,NA,NA
+Denson et al. 2009,9,B lymphocytes,19,0.02,0.0004,,,Cohen's d,NA,NA,NA
+Su et al. 2009,1,dimension: things-people,79,0.242,0.058564,,,Cohen's d,trim-and-fill,no,0
+Su et al. 2009,2,dimension: data-ideas,79,0.217,0.047089,,,Cohen's d,trim-and-fill,no,0
+Su et al. 2009,3,RIASEC interests: average d,80,0.101,0.010201,,,Cohen's d,trim-and-fill,no,0
+Su et al. 2009,4,STEM interests: science,34,0.221,0.048841,,,Cohen's d,trim-and-fill,no,0
+Su et al. 2009,5,STEM interests: mathematics,30,0.169,0.028561,,,Cohen's d,trim-and-fill,no,0
+Su et al. 2009,6,STEM interests: engineering,45,0.279,0.077841,,,Cohen's d,trim-and-fill,no,0
+Olatunji & Wolitzky-Taylor 2009,1,Anx vs. NCC,22,0.141421356,0.02,511.18,95.89185805,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,2,PD vs. NCC,17,0.2,0.04,442.01,96.38017239,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,3,SAD vs. NCC,5,0.2,0.04,13.58,70.544919,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,4,PTSD vs. NCC,5,0.68556546,0.47,116.45,96.56504938,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,5,GAD vs. NCC,4,0.264575131,0.07,24.65,87.8296146,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,6,Anx vs. MDC,11,0.244948974,0.06,255.4,96.08457322,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,7,PD vs. MDC,10,0.316227766,0.1,189.92,95.26116259,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,8,SAD vs. MDC,7,0.1,0.01,12.05,50.20746888,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,9,OCD vs. MDC,4,0.141421356,0.02,0.46,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,10,SP vs. MDC,4,0.1,0.01,2.92,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,11,GAD vs. MDC,7,0.316227766,0.1,66.01,90.91046811,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,12,MDC vs. NCC,5,0.1,0.01,6.23,35.79454254,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,13,PD vs. AWOP,3,0.173205081,0.03,1.67,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,14,PD vs. GAD,12,0.244948974,0.06,121.33,90.93381686,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,15,PD vs. PTSD,5,0.173205081,0.03,8.71,54.07577497,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,16,PD vs. OCD,9,0.141421356,0.02,27.3,70.6959707,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,17,PD vs. SAD,15,0.1,0.01,42.91,67.37357259,Cohen's d,fail-safe N,yes,1
+Olatunji & Wolitzky-Taylor 2009,18,PD vs. SP,7,0.223606798,0.05,26.17,77.07298433,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,19,SAD vs. GAD,11,0.1,0.01,13.68,26.9005848,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,20,SAD vs. OCD,8,0.1,0.01,8.04,12.93532338,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,21,SAD vs. PTSD,4,0.223606798,0.05,6.32,52.53164557,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,22,SAD vs. SP,7,0.1,0.01,9.14,34.35448578,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,23,AWOP vs. GAD,3,0.316227766,0.1,4.19,52.2673031,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,24,AWOP vs. OCD,3,0.2,0.04,1.12,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,25,AWOP vs. SAD,3,0.141421356,0.02,1.26,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,26,AWOP vs. SP,3,0.141421356,0.02,1.78,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,27,SP vs. GAD,7,0.173205081,0.03,11.97,49.87468672,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,28,SP vs. OCD,5,0.173205081,0.03,9.06,55.84988962,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,29,SP vs. PTSD,3,0.519615242,0.27,13.86,85.56998557,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,30,GAD vs. OCD,7,0.1,0.01,5.77,0,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,31,GAD vs. PTSD,5,0.447213595,0.2,39.92,89.97995992,Cohen's d,fail-safe N,no,0
+Olatunji & Wolitzky-Taylor 2009,32,OCD vs. PTSD,3,0.2,0.04,2.58,22.48062016,Cohen's d,fail-safe N,no,0
+Roseth et al. 2008,1,achievement: coop vs. comp,23,0.786892623,0.6192,,,Hedges' g,NA,NA,NA
+Roseth et al. 2008,2,achievement: coop vs. ind,55,0.433658852,0.18806,,,Hedges' g,NA,NA,NA
+Roseth et al. 2008,3,achievement: comp vs. ind,29,0.506320057,0.25636,,,Hedges' g,NA,NA,NA
+Roseth et al. 2008,4,positive peer relations: coop vs. comp,18,0.337298088,0.11377,,,Hedges' g,NA,NA,NA
+Roseth et al. 2008,5,positive peer relations: coop vs. ind,11,0.285622128,0.08158,,,Hedges' g,NA,NA,NA
+Roseth et al. 2008,6,positive peer relations: comp vs. ind,2,0.528251834,0.27905,,,Hedges' g,NA,NA,NA
+Karelaia & Hogarth 2008,1,r_a,249,0.238746728,0.057,17.319,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,2,G,236,0.258843582,0.067,19.829,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,3,R_e,246,0.187082869,0.035,10.706,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,4,R_s,237,0.137840488,0.019,5.644,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,5,C,204,0.151657509,0.023,6.249,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,6,GR_e,236,0.264575131,0.07,20.668,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,7,GR_s,236,0.244948974,0.06,17.469,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+Karelaia & Hogarth 2008,8,GR_e - r_a,236,0.089442719,0.008,2.461,0,Weighted mean,Begg's test/Egger test/funnel plot/trim-and-fill,no,0
+van Zomeren et al. 2008,1,injustice,65,0.2,0.04,541.19,88.17420869,Pearson's r,NA,NA,NA
+van Zomeren et al. 2008,2,efficacy,53,0.19,0.0361,365.78,85.78380447,Pearson's r,NA,NA,NA
+van Zomeren et al. 2008,3,identity,64,0.2,0.04,411.07,84.67414309,Pearson's r,NA,NA,NA
+Currier et al. 2008,1,randomized studies: posttreatment,36,0.2,0.04,58.14,39.8004816,Cohen's d,trim-and-fill/Egger test,no,0
+Currier et al. 2008,2,randomized studies: follow-up,27,0.141421356,0.02,36.81,29.36701983,Cohen's d,trim-and-fill/Egger test,no,0
+Currier et al. 2008,3,nonrandom studies: posttreatment,12,0.538516481,0.29,35.84,69.30803571,Cohen's d,trim-and-fill/Egger test,no,0
+Currier et al. 2008,4,nonrandom studies: follow-up,6,0,0,8.25,39.39393939,Cohen's d,trim-and-fill/Egger test,no,0
+Mitte 2008,1,lexical decision: negative primed,14,0.141421356,0.02,16.03,18.90205864,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,2,lexical decision: negative unprimed,14,0,0,13.42,3.129657228,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,3,lexical decision: neutral primed,14,0.223606798,0.05,19.76,34.21052632,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,4,lexical decision: neutral unprimed,14,0.223606798,0.05,18.94,31.36219641,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,5,lexical decision: positive primed,5,0,0,1.71,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,6,lexical decision: positive unprimed,5,0,0,2.48,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,7,word-stem completion: negative primed,19,0.2,0.04,26.56,32.22891566,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,8,word-stem completion: negative unprimed,15,0,0,8.26,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,9,word-stem completion: negative primed-unprimed,8,0.1,0.01,7.96,12.06030151,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,10,word-stem completion: neutral primed,17,0.173205081,0.03,21.6,25.92592593,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,11,word-stem completion: neutral unprimed,15,0,0,8.07,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,12,word-stem completion: neutral primed-unprimed,8,0,0,0.9,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,13,word-stem completion: positive primed,9,0,0,6.29,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,14,word-stem completion: positive unprimed,9,0.173205081,0.03,10.84,26.19926199,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,15,recognition: negative hits,38,0.316227766,0.1,85.01,56.47570874,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,16,recognition: negative false alarms,19,0,0,17.9,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,17,recognition: negative corrected hits,26,0.316227766,0.1,55.04,54.57848837,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,18,recognition: neutral hits,28,0.346410162,0.12,67.1,59.76154993,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,19,recognition: neutral false alarms,15,0,0,6,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,20,recognition: neutral corrected hits,21,0,0,0.9,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,21,recognition: positive hits,20,0,0,9.46,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,22,recognition: positive false alarms,9,0,0,2.2,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,23,recognition: positive corrected hits,12,0,0,12.08,8.940397351,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,24,recall: negative hits,101,0.264575131,0.07,187.26,46.59831251,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,25,recall: neutral hits,71,0,0,70.74,1.046084252,Hedges' g,trim-and-fill/funnel plot,no,0
+Mitte 2008,26,recall: positive hits,57,0,0,41.96,0,Hedges' g,trim-and-fill/funnel plot,no,0
+Steel 2007,1,task procrastination,8,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,2,trait procrastination,10,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,3,neuroticism,59,0.08,0.0064,,,Corrected Pearson's r,publication status as moderator,yes,1
+Steel 2007,4,all irrational beliefs,71,0.12,0.0144,,,Corrected Pearson's r,publication status as moderator,yes,1
+Steel 2007,5,self-efficacy,39,0.12,0.0144,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,6,self-esteem,33,0.07,0.0049,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,7,self-handicapping,16,0.13,0.0169,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,8,depression,56,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,9,openness to experience,16,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,10,intelligence/aptitude,14,0.08,0.0064,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,11,agreeableness,24,0.07,0.0049,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,12,extraversion,18,0.04,0.0016,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,13,positive affect,12,0.06,0.0036,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,14,impulsiveness,22,0.11,0.0121,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,15,sensation seeking,11,0.15,0.0225,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,16,boredom proneness,3,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,17,conscientiousness,20,0.06,0.0036,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,18,self-control,21,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,19,distractibility,13,0.11,0.0121,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,20,organization,25,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,21,achievement motivation,34,0.13,0.0169,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,22,dilatory behavior,16,0.08,0.0064,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,23,intention,8,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,24,intention-action gap,6,0,0,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,25,overall performance,41,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,26,GPA,19,0.07,0.0049,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,27,course GPA,10,0.03,0.0009,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,28,final exam,11,0.18,0.0324,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,29,assignments,13,0.15,0.0225,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,30,uncorrected age,16,0.08,0.0064,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,31,corrected age,16,0.13,0.0169,,,Corrected Pearson's r,publication status as moderator,no,0
+Steel 2007,32,gender,44,0.1,0.01,,,Corrected Pearson's r,publication status as moderator,no,0
+Weisz et al. 2006,1,psychotherapy and depression,35,0.4,0.16,,,mean WLS ES,publication status as moderator,no,0
+Webb & Sheeran 2006,1,interventions and intention,47,0.54,0.2916,,,Cohen's d,publication status as moderator,NA,NA
+Webb & Sheeran 2006,2,interventions and behavior,47,0.48,0.2304,,,Cohen's d,publication status as moderator,NA,NA
+Johnson et al. 2006,1,proposition 1a,28,0.023,0.000529,49.851,45.83859903,Cohen's d,trim-and-fill,no,0
+Johnson et al. 2006,2,proposition 1b,29,0.078,0.006084,89.806,68.82168229,Cohen's d,trim-and-fill,no,0
+Johnson et al. 2006,3,proposition 2,27,0.021,0.000441,55.611,53.24665983,Cohen's d,trim-and-fill,no,0
+Johnson et al. 2006,4,proposition 3,23,0.14,0.0196,113.598,80.63346186,Cohen's d,trim-and-fill,no,0
+Hakim & Viswesvaran 2005,1,calculative OC and affective OC,3,0.3269,0.10686361,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,2,calculative OC and normative OC,3,0,0,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,3,affective OC and continuance OC,163,0.2086,0.04351396,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,4,affective OC and normative OC,59,0.131,0.017161,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,5,continuance OC and normative OC,56,0.1397,0.01951609,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,6,job involvement and OC,142,0.1911,0.03651921,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,7,job involvement and attitudinal OC,4,0.1621,0.02627641,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,8,job involvement and calculative OC,5,0.048,0.002304,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,9,job involvement and affective OC,22,0.3328,0.11075584,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,10,job involvement and continuance OC,10,0.1544,0.02383936,,,Corrected Pearson's r,NA,NA,NA
+Hakim & Viswesvaran 2005,11,job incolvement and normative OC,5,0,0,,,Corrected Pearson's r,NA,NA,NA
+Mitte 2005,1,(C)BT no-treatment control: anxiety,19,0,0,10.91,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,2,(C)BT no-treatment control: depression,15,0,0,8.69,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,3,(C)BT no-treatment control: quality of life,6,0,0,4.04,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,4,(C)BT placebo control: anxiety,9,0,0,7.28,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,5,(C)BT placebo control: depression,6,0,0,1.06,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,6,(C)BT placebo control: clinical significance,4,0,0,2.8,0,Hedges' g,rank correlation test/trim-and-fill,no,0
+Mitte 2005,7,(C)BT pharmacotherapy: anxiety,8,0,0,6.8,0,Hedges' g,rank correlation test/trim-and-fill,yes,1
+Robbins et al. 2004,1,achievement motivation and retention,7,0.116,0.013456,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,2,academic goals and retention,33,0.314,0.098596,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,3,institutional commitment and retention,28,0.286,0.081796,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,4,social support and retention,26,0.254,0.064516,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,5,social involvement and retention,36,0.157,0.024649,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,6,academic self-efficacy and retention,6,0.009,0.000081,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,7,general self-concept and retention,6,0.098,0.009604,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,8,academic-related skills and retention,8,0.337,0.113569,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,9,financial support and retention,6,0.029,0.000841,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,10,institutional size and retention,6,0.048,0.002304,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,11,institutional selectivity and retention,6,0.172,0.029584,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,12,SES and retention,6,0.049,0.002401,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,13,high school GPA  and retention,12,0.151,0.022801,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,14,ACT/SAT scores and retention,11,0.09,0.0081,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,15,achievement motivation and GPA,17,0.131,0.017161,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,16,academic goals and GPA,34,0.099,0.009801,,,Corrected Pearson's r,trim-and-fill,yes,1
+Robbins et al. 2004,17,institutional commitment and GPA,11,0.081,0.006561,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,18,social support and GPA,33,0.097,0.009409,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,19,social involvement and GPA,33,0.122,0.014884,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,20,academic self-efficacy and GPA,18,0.172,0.029584,,,Corrected Pearson's r,trim-and-fill,yes,1
+Robbins et al. 2004,21,general self-concept and GPA,21,0.121,0.014641,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,22,academic-related skills and GPA,33,0.097,0.009409,,,Corrected Pearson's r,trim-and-fill,yes,1
+Robbins et al. 2004,23,financial support and GPA,5,0.081,0.006561,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,24,SES and GPA,13,0.044,0.001936,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,25,high school GPA and GPA,30,0.17,0.0289,,,Corrected Pearson's r,trim-and-fill,no,0
+Robbins et al. 2004,26,ACT/SAT scores and GPA,31,0.154,0.023716,,,Corrected Pearson's r,trim-and-fill,no,0
+Thoresen et al. 2003,1,PA and job satisfaction,79,0.16,0.0256,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,2,NA and job satisfaction,176,0.13,0.0169,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,3,PA and organizational commitment,15,0.18,0.0324,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,4,NA and organizational commitment,27,0.18,0.0324,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,5,PA and emotional exhaustion,11,0.05,0.0025,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,6,NA and emotional exhaustion,23,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,7,PA and depersonalization,10,0.14,0.0196,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,8,NA and depersonalization,18,0.11,0.0121,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,9,PA and personal accomplishment,10,0.11,0.0121,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,10,NA and personal accomplishment,17,0.12,0.0144,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,11,PA and turnover intentions,18,0.15,0.0225,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Thoresen et al. 2003,12,NA and turnover intentions,35,0.18,0.0324,,,Corrected Pearson's r,publication status as moderator/fail-safe N,no,0
+Kuncel et al. 2001,1,verbal and GGPA,103,0.15,0.0225,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,2,quantitative and GGPA,103,0.08,0.0064,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,3,analytical and GGPA,20,0.06,0.0036,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,4,subject and GGPA,22,0.07,0.0049,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,5,UGPA and GGPA,58,0.11,0.0121,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,6,verbal and 1st year GGPA,1231,0.12,0.0144,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,7,quantitative and 1st year GGPA,1231,0.12,0.0144,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,8,analytical and 1st year GGPA,1080,0.09,0.0081,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,9,subject and 1st year GGPA,98,0.04,0.0016,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,10,UGPA and 1st year GGPA,1178,0.1,0.01,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,11,verbal and exam scores,11,0.15,0.0225,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,12,quantitative and exam scores,11,0.06,0.0036,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,13,subject and exam scores,4,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,14,UGPA and exam scores,6,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,15,verbal and faculty ratings,35,0.14,0.0196,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,16,quantitative and faculty ratings,34,0.04,0.0016,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,17,analytical and faculty ratings,9,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,18,subject and faculty ratings,12,0.18,0.0324,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,19,UGPA and faculty ratings,22,0.14,0.0196,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,20,verbal and degree attainment,32,0.16,0.0256,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,21,quantitative and degree attainment,32,0.2,0.04,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,22,analytical and degree attainment,16,0.3,0.09,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,23,subject and degree attainment,11,0.17,0.0289,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,24,UGPA and degree attainment,33,0.16,0.0256,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,25,verbal and time to complete,3,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,26,quantitative and time to complete,3,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,27,subject and time to complete,2,0,0,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,28,UGPA and time to complete,5,0.04,0.0016,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,29,verbal and research productivity,18,0.13,0.0169,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,30,quantitative and research productivity,18,0.09,0.0081,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,31,subject and research productivity,16,0.12,0.0144,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,32,verbal and publication citation count,12,0.06,0.0036,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,33,quantitative and publication citation count,12,0.05,0.0025,,,Corrected Pearson's r,NA,NA,NA
+Kuncel et al. 2001,34,subject and publication citation count,12,0.04,0.0016,,,Corrected Pearson's r,NA,NA,NA
+Judge et al. 2001,1,job satisfaction and job performance,312,0.21,0.0441,1240.51,74.92966602,Corrected Pearson's r,publication status as moderator,no,0
+Postmes & Spears 1998,1,deindividuation and antinormative behavior,60,0.24,0.0576,218.25,72.96678121,Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,1,activity and extraversion,8,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,2,ascendance and extraversion,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,3,assertiveness and extraversion,8,0.14,0.0196,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,4,attention seeking and extraversion,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,5,dominance and extraversion,11,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,6,excitement seeking and extraversion,2,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,7,exhibition and extraversion,4,0.15,0.0225,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,8,extraversion and extraversion,41,0.15,0.0225,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,9,forceful and extraversion,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,10,gregariousness and extraversion,2,0.02,0.0004,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,11,hardiness and extraversion,4,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,12,harmavoidance and extraversion,4,0.09,0.0081,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,13,masculine and extraversion,11,0.12,0.0144,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,14,play and extraversion,7,0.12,0.0144,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,15,positive affectivity and extraversion,5,0.09,0.0081,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,16,sensation seeking and extraversion,2,0.27,0.0729,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,17,shrewdness and extraversion,4,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,18,sociability and extraversion,15,0.15,0.0225,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,19,social boldness and extraversion,4,0.2,0.04,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,20,social competence and extraversion,2,0.52,0.2704,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,21,surgency and extraversion,4,0.2,0.04,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,22,tempo and extraversion,2,0.25,0.0625,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,23,vigor and extraversion,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,24,abasement and agreeableness,4,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,25,admitting frailties and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,26,agreeableness and agreeableness,3,0.1,0.01,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,27,affiliation and agreeableness,10,0.15,0.0225,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,28,ambivalence over emotional expressiveness and agreeableness,2,0.43,0.1849,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,29,authoritarianism and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,30,collective self-esteem - identity and agreeableness,3,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,31,collective self-esteem - member and agreeableness,3,0.13,0.0169,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,32,collective self-esteem - private  and agreeableness,3,0.12,0.0144,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,33,collective self-esteem - public and agreeableness,3,0.17,0.0289,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,34,cooperation and agreeableness,3,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,35,cooperative - overconventional and agreeableness,2,0.02,0.0004,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,36,cynicism and agreeableness,2,0.2,0.04,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,37,emotional expressiveness and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,38,empathy and agreeableness,2,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,39,fear of intimacy and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,40,feminine and agreeableness,10,0.13,0.0169,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,41,friendliness and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,42,help-seeking and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,43,interpersonal locus of control and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,44,nurturance and agreeableness,5,0.2,0.04,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,45,personal relations and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,46,responsible - hypernormal and agreeableness,2,0.16,0.0256,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,47,self-efficacing - masochistic and agreeableness,2,0.16,0.0256,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,48,sensitivity and agreeableness,5,0.26,0.0676,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,49,sensitivity to social rejection and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,50,social desirability and agreeableness,21,0.18,0.0324,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,51,social emotionality and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,52,social endurance and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,53,social interest and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,54,social plasticity and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,55,social recognition and agreeableness,4,0.18,0.0324,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,56,social tempo and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,57,succorance and agreeableness,4,0.17,0.0289,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,58,tolerance and agreeableness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,59,tough poise and agreeableness,2,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,60,trust and agreeableness,3,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,61,understanding and agreeableness,4,0.16,0.0256,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,62,warmth and agreeableness,4,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,63,achievement and conscientiousness,9,0.16,0.0256,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,64,autonomy and conscientiousness,9,0.15,0.0225,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,65,blameavoidance and conscientiousness,4,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,66,competence and conscientiousness,2,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,67,conscientiousness and conscientiousness,3,0.1,0.01,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,68,constraint and conscientiousness,5,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,69,control and conscientiousness,4,0.18,0.0324,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,70,counteraction and conscientiousness,6,0.23,0.0529,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,71,deliberate and conscientiousness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,72,desire for control and conscientiousness,5,0.12,0.0144,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,73,directive and conscientiousness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,74,efficacy and conscientiousness,4,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,75,endurance and conscientiousness,6,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,76,impulsivity and conscientiousness,12,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,77,independence and conscientiousness,2,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,78,inhibition and conscientiousness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,79,internal locus of control and conscientiousness,66,0.17,0.0289,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,80,locus of control - chance and conscientiousness,6,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,81,locus of control - powerful others and conscientiousness,6,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,82,managerial - autocratic and conscientiousness,2,0.04,0.0016,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,83,order and conscientiousness,6,0.14,0.0196,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,84,perceived control and conscientiousness,19,0.21,0.0441,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,85,plasticity and conscientiousness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,86,reactance and conscientiousness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,87,rule conscious and conscientiousness,2,0.02,0.0004,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,88,self-sufficiency and conscientiousness,4,0.24,0.0576,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,89,affect intensity and neuroticism,2,0.1,0.01,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,90,aggression and neuroticism,4,0.18,0.0324,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,91,aggressive - sadistic and neuroticism,2,0.04,0.0016,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,92,anger and neuroticism,4,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,93,anxiety and neuroticism,12,0.33,0.1089,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,94,death anxiety and neuroticism,4,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,95,death concern - negative evaluation of death and neuroticism,2,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,96,defendence and neuroticism,4,0.11,0.0121,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,97,depression and neuroticism,2,0.01,0.0001,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,98,distress and neuroticism,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,99,emotional stability and neuroticism,6,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,100,fear and neuroticism,2,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,101,general emotionality and neuroticism,6,0.26,0.0676,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,102,guilt-proneness and neuroticism,4,0.12,0.0144,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,103,hostility and neuroticism,3,0.37,0.1369,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,104,negative affectivity and neuroticism,7,0.41,0.1681,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,105,neuroticism and neuroticism,41,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,106,objectivity and neuroticism,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,107,psychoticism and neuroticism,5,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,108,rebellious - distrustful and neuroticism,2,0.18,0.0324,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,109,repressive defensiveness and neuroticism,4,0.28,0.0784,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,110,self-consciousness and neuroticism,2,0.01,0.0001,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,111,social anxiety and neuroticism,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,112,tension and neuroticism,4,0.16,0.0256,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,113,vulnerability and neuroticism,2,0.02,0.0004,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,114,automatic thoughts - general and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,115,automatic thoughts - positive and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,116,belief in a just world and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,117,conceptual level and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,118,creative and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,119,death concern - preoccupation with thoughts and openness,2,0.06,0.0036,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,120,intelligence and openness,19,0.06,0.0036,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,121,mental absorption and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,122,novelty seeking and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,123,openness to action and openness,2,0.01,0.0001,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,124,openness to aesthetics and openness,2,0,0,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,125,openness to experience and openness,9,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,126,openness to fantasy and openness,2,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,127,openness to feeling and openness,2,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,128,openness to ideas and openness,2,0,0,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,129,openness to values and openness,2,0.01,0.0001,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,130,practicality and openness,4,0.26,0.0676,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,131,radicalism and openness,2,0.08,0.0064,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,132,rigidity and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,133,rule-free and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,134,self-confidence and openness,2,0.05,0.0025,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,135,self-respect and openness,2,0.07,0.0049,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,136,sentience and openness,4,0.17,0.0289,,,Weighted Pearson's r,NA,NA,NA
+DeNeve & Cooper 1998,137,thoughtfulness and openness,1,,,,,Weighted Pearson's r,NA,NA,NA
+Stajkovic & Luthans 1998,1,self-efficacy and work-related perfomance,157,0.169779268,0.028825,1129.08,86.18344139,Corrected Pearson's r,NA,NA,NA
+Wampold et al. 1997,1,differences psychotherapies,277,0.016124515,0.00026,241.18,0,Cohen's d,NA,NA,NA
+Brown 1996,1,work ethic endorsement,13,0.157,0.024649,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,2,locus of control,22,0.172,0.029584,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,3,self-esteem,5,0.156,0.024336,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,4,growth need strength,7,0.16,0.0256,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,5,internal motivation,19,0.205,0.042025,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,6,autonomy,18,0.168,0.028224,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,7,skill variety,15,0.186,0.034596,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,8,task identity,14,0.09,0.0081,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,9,feedback,13,0.129,0.016641,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,10,task significance,8,0.09,0.0081,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,11,job challenge,6,0.096,0.009216,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,12,task complexity,5,0.136,0.018496,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,13,motivating potential,7,0.108,0.011664,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,14,hierarchical level,8,0.352,0.123904,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,15,consideration,9,0.078,0.006084,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,16,participation,9,0.117,0.013689,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,17,communication,5,0.116,0.013456,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,18,role conflict,27,0.12,0.0144,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,19,role ambiguity,32,0.192,0.036864,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,20,age,50,0.145,0.021025,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,21,organizational tenure,30,0.13,0.0169,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,22,education,29,0.094,0.008836,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,23,sex,25,0.129,0.016641,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,24,salary,14,0.142,0.020164,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,25,marital status,6,0.082,0.006724,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,26,career commitment,10,0.294,0.086436,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,27,work involvement,6,0.13,0.0169,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,28,overall performance,25,0.089,0.007921,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,29,absenteeism,17,0.125,0.015625,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,30,turnover,11,0.181,0.032761,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,31,effort,7,0.196,0.038416,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,32,general satisfaction,87,0.159,0.025281,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,33,work satisfaction,20,0.119,0.014161,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,34,supervisor satisfaction,19,0.113,0.012769,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,35,coworker satisfaction,17,0.101,0.010201,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,36,pay satisfaction,16,0.142,0.020164,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,37,promotion satisfaction,10,0.037,0.001369,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,38,organizational commitment,71,0.181,0.032761,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,39,turnover intentions,23,0.158,0.024964,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,40,work-family conflict,6,0.393,0.154449,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,41,job stress,10,0.175,0.030625,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,42,anxiety,5,0.098,0.009604,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,43,somatic health complaints,5,0.08,0.0064,,,Corrected Pearson's r,NA,NA,NA
+Brown 1996,44,life satisfaction,6,0.117,0.013689,,,Corrected Pearson's r,NA,NA,NA
+Kluger & DeNisi 1996,1,feedback interventions and performance,607,0.98488578,0.97,,,Weighted Cohen's d,NA,NA,NA
+See et al. 1995,1,sensitivity decrement in vigilance,42,0.45,0.2025,,,Unweighted mean,NA,NA,NA
+Sporer et al. 1995,1,confidence-accuracy relation in eyewitness identification,30,0.12,0.0144,,,Unweighted Pearson's r,NA,NA,NA
+Tracey & Rounds 1993,1,Gati,58,0.19,0.0361,,,Unweighted mean,NA,NA,NA
+Tracey & Rounds 1993,2,Holland,58,0.18,0.0324,,,Unweighted mean,NA,NA,NA
+Tracey & Rounds 1993,3,Hollgat,58,0.17,0.0289,,,Unweighted mean,NA,NA,NA
+Ambady & Rosenthal 1992,1,expressive behavior as predictor of interpersonal consequences,45,0.19,0.0361,,,Weighted Pearson's r,NA,NA,NA
+Spangler 1992,1,questionnaire: respondent,89,0.17,0.0289,,,Pearson's r,NA,NA,NA
+Spangler 1992,2,questionnaire: semioperant,92,0.24,0.0576,,,Pearson's r,NA,NA,NA
+Spangler 1992,3,questionnaire: operant,12,0.13,0.0169,,,Pearson's r,NA,NA,NA
+Spangler 1992,4,TAT: respondent,108,0.18,0.0324,,,Pearson's r,NA,NA,NA
+Spangler 1992,5,TAT: semioperant,45,0.3,0.09,,,Pearson's r,NA,NA,NA
+Spangler 1992,6,TAT: operant,37,0.22,0.0484,,,Pearson's r,NA,NA,NA
+Durlak et al. 1991,1,behavioral observation,58,0.82,0.6724,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,2,peer rating-sociometric,19,0.29,0.0841,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,3,expert rating,8,0.84,0.7056,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,4,normed measures,51,0.62,0.3844,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,5,unnormed measures,74,0.71,0.5041,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,6,achievement-intellectual test,20,0.43,0.1849,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,7,cognitive performance measure,78,0.87,0.7569,,,Cohen's d,comparing published and unpublished studies,no,0
+Durlak et al. 1991,8,objective performance measure,4,0.79,0.6241,,,Cohen's d,comparing published and unpublished studies,no,0
+Hardaway 1990,1,mommy and I are one,72,0,0,,,Cohen's d,fail-safe N,no,0
+Hardaway 1990,2,other mommy stimuli,19,0,0,,,Cohen's d,fail-safe N,no,0
+Hardaway 1990,3,other oneness stimuli,20,0,0,,,Cohen's d,fail-safe N,no,0
+Raz & Raz 1990,1,lateral or total ventricular volume,53,0.54,0.2916,,,Cohen's d,NA,NA,NA
+Raz & Raz 1990,2,third ventricular dilation,23,0.56,0.3136,,,Cohen's d,NA,NA,NA
+Raz & Raz 1990,3,mood disorders,18,0.43,0.1849,,,Cohen's d,NA,NA,NA
+Mathieu & Zajac 1990,1,age,41,0.103,0.010609,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,2,sex,14,0.165,0.027225,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,3,education,22,0.137,0.018769,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,4,marital status,6,0.02,0.0004,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,5,position tenure,8,0.076,0.005776,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,6,organizational tenure,38,0.113,0.012769,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,7,perceived personal competence,5,0.072,0.005184,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,8,ability,3,,,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,9,salary,7,0.036,0.001296,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,10,protestant work ethic,7,0.195,0.038025,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,11,job level,13,0.161,0.025921,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,12,skill variety,6,0.099,0.009801,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,13,task autonomy,3,0.201,0.040401,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,14,challenge,3,0.206,0.042436,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,15,job scope,5,,,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,16,group cohesiveness,3,0.281,0.078961,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,17,task interdependence,4,0.069,0.004761,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,18,leader initiating structure,14,0.21,0.0441,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,19,leader consideration,12,0.178,0.031684,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,20,leader communication,4,0.053,0.002809,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,21,participative leadership,3,,,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,22,organizational size,3,0.108,0.011664,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,23,organizational centralization,3,0.234,0.054756,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,24,role ambiguity,21,0.287,0.082369,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,25,role conflict,24,0.222,0.049284,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,26,role overload,5,0.136,0.018496,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,27,motivation (overall),5,,,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,28,motivation (internal),5,0.182,0.033124,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,29,job involvement,20,0.19,0.0361,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,30,stress,16,0.136,0.018496,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,31,occupational commitment,22,0.243,0.059049,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,32,union commitment,5,0.115,0.013225,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,33,overall job satisfaction,43,0.241,0.058081,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,34,job performance: others' ratings,10,0.089,0.007921,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,35,job performance: output measure,6,0.091,0.008281,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,36,perceived job alternatives,7,0.225,0.050625,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,37,intention to search,5,0.177,0.031329,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,38,intention to leave,36,0.181,0.032761,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,39,attendance,23,0.024,0.000576,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,40,lateness,6,0.059,0.003481,,,Weighted corrected Pearson's r,NA,NA,NA
+Mathieu & Zajac 1990,41,turnover,26,0.138,0.019044,,,Weighted corrected Pearson's r,NA,NA,NA
